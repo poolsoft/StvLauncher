@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LetvAppPlugin</string>
+    <!-- App Desktop string begin -->
+    <string name="default_new_folder_name">New folder</string>
+
+    <string name="menu_new_folder">New folder</string>
+    <string name="menu_move_app">Move app</string>
+    <string name="menu_uninstall_app">Uninstall app</string>
+    <string name="menu_add_app">Add app</string>
+    <string name="menu_app_stick">App stick</string>
+    <string name="menu_manage_app">App management</string>
+    <string name="menu_feedback">Feedback</string>
+
+    <string name="press_center_key_to_confirm">Press OK to confirm the movement.</string>
+    <string name="press_center_key_to_add">Press OK to add the app to "%1$s".</string>
+    <string name="press_center_key_to_uninstall">Press OK to uninstall the app.</string>
+    <string name="exit">Exit</string>
+    <string name="can_not_rm_system_app">System apps cannot be uninstalled</string>
+    <string name="folder_full">Folder is full</string>
+    <string name="into_folder_to_handle">Press Menu to uninstall the app after entering the folder.</string>
+    <string name="folder_name_full">Up to 12 characters can be entered</string>
+    <string name="folder_name_cant_null">Folder name cannot be empty</string>
+    <string name="back_to_home">Move to all apps</string>
+    <string name="add_to_folder_fail">Failed to add to the folder</string>
+    <string name="folder_name_same">A folder with the same name, please use other names.</string>
+    <string name="match_folder_name_str">folder</string>
+    <string name="voice_folder_name_prefix">open</string>
+    <string name="default_folder_name_tool">Tools</string>
+    <!-- App Desktop string end -->
+    <string name="superscript_new">NEW</string>
+    <string name="app_workspace_loading_text">Data loading...</string>
+
+    <string name="preloaded_app_cibn_folder">CIBN APP</string>
+    <string name="preloaded_app_cibn_hdmv">CIBN-TV</string>
+    <string name="preloaded_app_cibn_news">Global view</string>
+    <string name="preloaded_app_cibn_tearoom">TEA E-sports</string>
+
+    <string name="preloaded_app_installing">Installing...</string>
+    <string name="preloaded_app_loading">Loading...</string>
+
+    <string name="check_network_text">Please check network</string>
+    <string name="close_str">Close</string>
+    <string name="not_downlaod_str">Unable download</string>
+    <string name="not_install_str">Unable install</string>
+    <string name="set_network_str">setting up network</string>
+    <string name="not_available_space">Insufficient space</string>
+    <string name="please_retry_str">Please try again later</string>
+    <string name="clear_str">Go clean</string>
+    <string name="please_goto_tv_manager">Please go to &quot;Tv Manager&quot;to clean up some of the files</string>
+    <string name="stop_download">Stop download</string>
+    <string name="stop">Stop</string>
+    <string name="go_download">Continue to download</string>
+    <string name="cannot_save_progress">Before the schedule will not be saved</string>
+    <string name="please_wait_install">The application has been downloaded</string>
+
+</resources>

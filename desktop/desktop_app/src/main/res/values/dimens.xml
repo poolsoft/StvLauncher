@@ -1,0 +1,65 @@
+<resources>
+
+    <integer name="app_scale_duration">200</integer>
+
+    <dimen name="app_corners">6dp</dimen>
+
+    <!--poster workspace-->
+    <dimen name="poster_workspace_margin_top">126dp</dimen>
+    <dimen name="poster_recycerview_padding_left">80dp</dimen>
+    <dimen name="poster_recycerview_padding_right">80dp</dimen>
+    <dimen name="poster_recycerview_padding_top">30dp</dimen>
+    <dimen name="poster_recycerview_padding_bottom">30dp</dimen>
+    <dimen name="poster_workspace_item_width1">208dp</dimen>
+    <dimen name="poster_workspace_item_height1">156dp</dimen>
+    <dimen name="poster_workspace_item_height2">117dp</dimen>
+    <dimen name="poster_workspace_item_height3">277dp</dimen>
+    <dimen name="poster_workspace_item">20dp</dimen>
+
+    <dimen name="poster_cellview_label_marginBottom">7dp</dimen>
+    <dimen name="poster_cellview_label_marginLeft">8dp</dimen>
+    <dimen name="poster_cellview_label_textSize">20sp</dimen>
+    <dimen name="poster_cellview_subtitle_marginBottom">6dp</dimen>
+    <dimen name="poster_cellview_subtitle_textSize">16sp</dimen>
+    <dimen name="poster_cellview_title_marginBottom">26dp</dimen>
+    <dimen name="poster_cellview_title_textSize">20sp</dimen>
+
+    <!--app workspace-->
+    <dimen name="app_workspace_top_layout_height">100dp</dimen>
+    <dimen name="app_recyclerview_marginTop">128dp</dimen>
+    <dimen name="app_recyclerview_paddingLeft">80dp</dimen>
+    <dimen name="app_recyclerview_paddingRight">60dp</dimen>
+    <dimen name="app_recyclerview_paddingTop">28dp</dimen>
+
+    <dimen name="app_cell_view_icon_width">64dp</dimen>
+    <dimen name="app_cell_view_icon_height">64dp</dimen>
+    <dimen name="app_cell_view_icon_marginBottom">4dp</dimen>
+    <dimen name="app_cell_view_label_marginBottom">8dp</dimen>
+
+    <dimen name="app_cell_view_icon_marginTop">13dp</dimen>
+    <dimen name="app_cell_view_icon_add_marginTop">36dp</dimen>
+
+    <dimen name="app_folder_label_textSize">21sp</dimen>
+    <dimen name="app_folder_label_marginTop">4dp</dimen>
+    <dimen name="app_folder_label_marginBottom">8dp</dimen>
+
+    <dimen name="app_cell_view_superscript_height">22dp</dimen>
+    <dimen name="app_cell_view_superscript_padding">8dp</dimen>
+    <dimen name="app_cell_view_superscript_margin">6dp</dimen>
+    <dimen name="app_cell_view_superscript_system_textSize">14sp</dimen>
+    <dimen name="app_cell_view_superscript_msg_textSize">16sp</dimen>
+
+    <dimen name="circle_progress_view_strokeWidth">4dp</dimen>
+    <dimen name="circle_progress_view_radius">30dp</dimen>
+    <dimen name="circle_progress_poster_big_radius">32dp</dimen>
+    <dimen name="circle_progress_poster_small_radius">28dp</dimen>
+
+    <!--progressbar-->
+    <dimen name="progressbar_size">92dp</dimen>
+    <dimen name="workspace_loading_tips_marginTop">20dp</dimen>
+    <dimen name="workspace_loading_tips_textSize">26sp</dimen>
+
+    <dimen name="bottom_progressbar_size">30dp</dimen>
+    <dimen name="margin_between_posters">8dp</dimen>
+    <dimen name="sub_title_size">18sp</dimen>
+</resources>

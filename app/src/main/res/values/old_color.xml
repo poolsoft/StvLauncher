@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="translate">#00000000</color>
+    <color name="white">#ffffffff</color>
+    <color name="white_forty">#66ffffff</color>
+    <color name="white_twenty">#33ffffff</color>
+    <color name="white_thirty">#4dffffff</color>
+    <color name="white_ten">#19ffffff</color>
+    <color name="white_six">#0fffffff</color>
+    <color name="white_twelve">#1fffffff</color>
+    <color name="white_fifty">#7fffffff</color>
+    <color name="black_fifty">#99000000</color>
+    <color name="blue">#0095ee</color>
+    <color name="blue_forty">#660085ee</color>
+    <color name="red_ten">#19cc0000</color>
+    <!-- <color name="channellist_bg_color">#D9000000</color> -->
+    <color name="transparent">#00000000</color>
+
+    <!-- notification -->
+    <color name="notification_txt_alpha">#aeffffff</color>
+    <color name="notification_txt_white">#ffffffff</color>
+    <color name="notification_tv_helper_out">#b2069ff1</color>
+    <color name="notification_tv_helper_out_unused">#19000000</color>
+    <color name="notification_tv_helper_in">#069ff1</color>
+    <color name="notification_tv_helper_in_unused">#33000000</color>
+    <color name="notification_time_orange">#ff8400</color>
+    <color name="notification_unread_red">#d71b1b</color>
+    <color name="notification_item_bg">#26f7f9fa</color>
+    <color name="title_promotion_message_bg_color">#1Affffff</color>
+    <color name="title_promotion_message_textcolor_unfocus">#4dffffff</color>
+    <color name="title_promotion_message_textcolor_focus">#cc000000</color>
+    <!-- notification end -->
+
+    <color name="letv_normal">#66ffffff</color> <!-- 40% -->
+    <color name="letv_20white">#33ffffff</color>
+    <!--DeskTopManager -->
+    <color name="desktop_manager_bg_mask">#6c000000</color>
+    <color name="screen_item_focus">#0f93e7</color>
+</resources>

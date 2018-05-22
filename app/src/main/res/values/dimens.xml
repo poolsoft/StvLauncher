@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- TabSpace -->
+    <dimen name="tabspace_layout_height">70dip</dimen>
+    <dimen name="tabspace_layout_margin_top">52dip</dimen>
+    <dimen name="tabspace_layout_padding_horizontal_leftedge">80dip</dimen>
+    <dimen name="tabspace_layout_padding_horizontal_rightedge">80dip</dimen>
+    <dimen name="tabspace_items_margin">52dip</dimen>
+    <dimen name="tabspace_item_padding_horizontal">26dip</dimen>
+    <dimen name="tabspace_manager_bt_height">42dp</dimen>
+    <dimen name="tabspace_manager_bt_padding">28dp</dimen>
+    <dimen name="tabspace_manager_bt_padding_bottom">4dp</dimen>
+    <dimen name="tabspace_text_height">40dp</dimen>
+
+    <!-- MetroSpace -->
+    <dimen name="metro_dynamic_grid_padding_top_edge">117dip</dimen>
+    <dimen name="metro_dynamic_grid_padding_horizontal_edge">107dip</dimen>
+    <dimen name="metro_dynamic_grid_padding_bottom_edge">0dip</dimen>
+    <dimen name="gesture_init_width">120dip</dimen>
+    <dimen name="gesture_init_height">360dip</dimen>
+    <dimen name="gesture_width">686dip</dimen>
+    <dimen name="gesture_height">340dip</dimen>
+    <dimen name="gesture_bottom_top_area">46dip</dimen>
+    <dimen name="gesture_arrow1_x">12dip</dimen>
+    <dimen name="gesture_arrow2_x">46dip</dimen>
+    <dimen name="gesture_arrow3_X">79dip</dimen>
+    <dimen name="gesture_arrow4_x">112dip</dimen>
+    <!-- Title View -->
+
+    <!-- reflection image -->
+    <!-- <dimen name="reflection_font_baseline">11dp</dimen> -->
+    <dimen name="app_notifiication_focus_left_offset">26dp</dimen>
+    <dimen name="app_notifiication_focus_top_offset">26dp</dimen>
+    <dimen name="app_notifiication_focus_width_offset">54dp</dimen>
+    <dimen name="app_notifiication_focus_height_offset">55dp</dimen>
+
+    <!-- advertise view begin -->
+    <dimen name="title_logo_ad_width">152dp</dimen>
+    <dimen name="title_logo_ad_height">40dp</dimen>
+    <dimen name="title_logo_ad_marginLeft">128dp</dimen>
+    <dimen name="title_logo_ad_marginTop">16dp</dimen>
+    <dimen name="bg_ad_width">1280dp</dimen>
+    <dimen name="bg_ad_height">720dp</dimen>
+    <!-- advertise view end -->
+    <!-- DeskTopManager -->
+    <dimen name="margin_small">2dp</dimen>
+    <dimen name="margin_middle">12dp</dimen>
+    <dimen name="item_width">189dp</dimen>
+    <dimen name="item_height">116dp</dimen>
+    <dimen name="desktop_manager_left_padding">81dp</dimen>
+    <dimen name="desktop_manager_top_padding">35dp</dimen>
+    <dimen name="desktop_manager_plugin_padding">10dip</dimen>
+    <dimen name="desktop_manager_plugin_text_size">30sp</dimen>
+    <dimen name="desktop_manager_title_text_size">29sp</dimen>
+    <dimen name="desktop_manager_title_left_margin">-41dp</dimen>
+    <dimen name="desktop_manager_title_drawable_padding">8dp</dimen>
+    <dimen name="desktop_manager_content_width">400dp</dimen>
+    <dimen name="desktop_manager_content_title_top_margin">50dp</dimen>
+    <dimen name="desktop_manager_content_title_text_size">40sp</dimen>
+    <dimen name="desktop_manager_content_version_text_size">20sp</dimen>
+    <dimen name="desktop_manager_description_top_margin">14dp</dimen>
+    <dimen name="desktop_manager_description_line_space">2dp</dimen>
+    <dimen name="desktop_manager_description_text_size">20sp</dimen>
+    <dimen name="desktop_manager_gab_top_margin">14dp</dimen>
+    <dimen name="desktop_manager_gab_text_size">20sp</dimen>
+    <dimen name="desktop_manager_main_button_top_margin">24dp</dimen>
+    <dimen name="desktop_manager_main_button_padding">40dp</dimen>
+    <dimen name="desktop_manager_inuse_tv_top_margin">100dp</dimen>
+    <dimen name="desktop_manager_label_tv_text_size">20sp</dimen>
+    <dimen name="desktop_manager_rlv_width">1280dp</dimen>
+    <dimen name="desktop_manager_rlv_height">116dp</dimen>
+    <dimen name="desktop_manager_rlv_top_margin">8dp</dimen>
+    <dimen name="desktop_manager_rlv_left_margin">-81dp</dimen>
+    <dimen name="desktop_manager_rlv_padding">72dp</dimen>
+    <dimen name="desktop_manager_toadd_tv_top_margin">22dp</dimen>
+    <dimen name="desktop_manager_item_coming_text_size">17sp</dimen>
+    <dimen name="screen_manager_item_icon_height">50dp</dimen>
+    <dimen name="screen_manager_item_icon_top_margin">16dp</dimen>
+    <dimen name="screen_manager_item_text_size">20sp</dimen>
+    <dimen name="screen_manager_item_rec_width">32dp</dimen>
+    <dimen name="screen_manager_item_rec_height">32dp</dimen>
+    <dimen name="desktop_manager_radius">4dp</dimen>
+    <dimen name="desktop_manager_edit_mode_width">2dp</dimen>
+    <dimen name="desktop_manager_noview_dash_gap">6dp</dimen>
+    <dimen name="desktop_manager_noview_dash_width">8dp</dimen>
+    <dimen name="desktop_manager_arrow_size">19dp</dimen>
+    <dimen name="desktop_manager_arrow_padding">35dp</dimen>
+
+    <!-- DeskTopManager end -->
+    <dimen name="tab_ad_width">45dp</dimen>
+    <dimen name="tab_ad_height">30dp</dimen>
+    <!-- advertise view end -->
+
+
+    <!-- extract dimens from layout files -->
+    <dimen name="activity_launcher_news_pop_text_size">16sp</dimen>
+    <dimen name="activity_launcher_tab_scrollview_padding_right">53dip</dimen>
+    <dimen name="activity_launcher_tab_strip_height">50dp</dimen>
+    <dimen name="activity_launcher_tab_strip_margin_right">113dp</dimen>
+    <dimen name="activity_launcher_tab_strip_text_size">28sp</dimen>
+    <dimen name="activity_launcher_tab_strip_padding_left">35dp</dimen>
+    <dimen name="activity_launcher_desktop_manager_margin_left">980dip</dimen>
+    <dimen name="activity_launcher_desktop_manager_margin_top">20dip</dimen>
+    <dimen name="activity_launcher_desktop_manager_text_size">20sp</dimen>
+    <dimen name="activity_screen_manager_top_title_margin_left">51dip</dimen>
+    <dimen name="activity_screen_manager_top_title_drawable_padding">16dip</dimen>
+    <dimen name="activity_screen_manager_tip_text_size">20sp</dimen>
+    <dimen name="app_lock_login_password_tv_title_text_size">36sp</dimen>
+    <dimen name="app_lock_login_password_edit_text_margin_top">44dp</dimen>
+    <dimen name="app_lock_login_password_le_voice_margin_top">32dp</dimen>
+    <dimen name="app_lock_login_password_tv_prompt_margin_left">12dp</dimen>
+    <dimen name="app_lock_login_password_tv_voice_margin_left">12dp</dimen>
+    <dimen name="app_lock_login_password_tv_voice_text_size">16sp</dimen>
+    <dimen name="app_lock_login_password_btn_forget_pwd_text_size">26sp</dimen>
+    <dimen name="app_lock_login_password_btn_forget_pwd_width">256dp</dimen>
+    <dimen name="app_lock_login_password_btn_forget_margin_top">44dp</dimen>
+    <dimen name="boot_desktop_dailog_btn_txt_content_margin">20dp</dimen>
+    <dimen name="boot_desktop_dailog_button_area_margin_top">20dp</dimen>
+    <dimen name="boot_desktop_dailog_button_area_margin_bottom">10dp</dimen>
+    <dimen name="boot_desktop_dailog_button_area_margin_left">44dp</dimen>
+    <dimen name="boot_desktop_dailog_btn_boot_ok_margin_left">43dp</dimen>
+    <dimen name="boot_desktop_dailog_btn_boot_ok_margin_top">8dp</dimen>
+    <dimen name="fragment_loading_plugin_progressbar_width">92dp</dimen>
+    <dimen name="fragment_loading_plugin_tips_text_size">26sp</dimen>
+    <dimen name="fragment_loading_plugin_action_tips_text_size">20sp</dimen>
+    <dimen name="fragment_loading_plugin_tips_margin_top">20dip</dimen>
+    <dimen name="fragment_loading_plugin_action_tips_margin_top">10dip</dimen>
+    <dimen name="fragment_loading_plugin_retry_bt_margin_top">20dip</dimen>
+    <dimen name="fragment_loading_plugin_retry_bt_padding_left">48dip</dimen>
+    <dimen name="fragment_lockproxy_ic_margin_top">246dip</dimen>
+    <dimen name="fragment_lockproxy_tv_margin_top">12dip</dimen>
+    <dimen name="fragment_lockproxy_tv_text_size">20sp</dimen>
+    <dimen name="fragment_lockproxy_input_pw_padding_left">50dip</dimen>
+    <dimen name="fragment_lockproxy_input_pw_height">60dp</dimen>
+    <dimen name="fragment_lockproxy_input_pw_margin_top">28dip</dimen>
+    <dimen name="fragment_lockproxy_input_pw_text_size">26sp</dimen>
+    <dimen name="gesture_view_eys_sight_img_hand_up_click_width">194dp</dimen>
+    <dimen name="gesture_view_eys_sight_img_hand_up_click_height">106dp</dimen>
+    <dimen name="gesture_view_eys_sight_img_hand_left_click_width">106dp</dimen>
+    <dimen name="gesture_view_eys_sight_img_hand_left_click_height">194dp</dimen>
+    <dimen name="gesture_view_eys_sight_switch_tip_left_margin_left">110dp</dimen>
+    <dimen name="gesture_view_eys_sight_switch_tip_left_padding_left">15dp</dimen>
+    <dimen name="gesture_view_eys_sight_switch_tip_left_text_size">20sp</dimen>
+    <dimen name="gesture_view_eys_sight_img_hand_right_click_width">106dp</dimen>
+    <dimen name="gesture_view_eys_sight_img_hand_right_click_height">194dp</dimen>
+    <dimen name="gesture_view_eys_sight_img_hand_down_click_width">194dp</dimen>
+    <dimen name="gesture_view_eys_sight_img_hand_down_click_height">106dp</dimen>
+    <dimen name="launcher_loading_bar_ly_cibn_margin_top">270dp</dimen>
+    <dimen name="launcher_loading_bar_progress_bar_width">26dip</dimen>
+    <dimen name="launcher_loading_bar_progress_bar_margin_top">251dp</dimen>
+    <dimen name="launcher_loading_bar_cibn_tips_margin_left">40dp</dimen>
+    <dimen name="launcher_loading_bar_cibn_tips_margin_top">246dp</dimen>
+    <dimen name="launcher_loading_bar_ly_full_margin_top">273dp</dimen>
+    <dimen name="launcher_loading_bar_pager_loading_width">92dp</dimen>
+    <dimen name="launcher_loading_bar_pager_loading_height">92dp</dimen>
+    <dimen name="launcher_loading_bar_full_tips_margin_top">20dp</dimen>
+    <dimen name="launcher_loading_bar_full_tips_text_size">26sp</dimen>
+    <dimen name="gesture_view_icon_arrow_left_4_margin_left">35dip</dimen>
+    <dimen name="gesture_view_icon_arrow_left_3_margin_left">95dip</dimen>
+    <dimen name="gesture_view_icon_arrow_left_2_margin_left">165dip</dimen>
+    <dimen name="gesture_view_icon_arrow_left_1_margin_left">245dip</dimen>
+    <dimen name="gesture_view_circle_big_left_margin_left">393dip</dimen>
+
+    <!-- zgh -->
+    <dimen name="view_sub_hand_detect_img_guide_marginTop">26dp</dimen>
+    <dimen name="view_sub_hand_detect_img_guide_marginBottom">26dp</dimen>
+    <dimen name="view_sub_hand_detect_img_guide_marginLeft">26dp</dimen>
+    <dimen name="view_sub_hand_detect_img_guide_marginRight">26dp</dimen>
+    <dimen name="screenless_option_layout_title_marginTop">50dip</dimen>
+    <dimen name="screenless_option_layout_title_textSize">34sp</dimen>
+    <dimen name="screenless_option_layout_top_tips_marginTop">32dip</dimen>
+    <dimen name="screenless_option_layout_top_tips_textSize">26sp</dimen>
+    <dimen name="screenless_option_layout_viewpager_height">271dip</dimen>
+    <dimen name="screenless_option_layout_viewpager_marginTop">87dip</dimen>
+    <dimen name="screenless_option_layout_viewpager_paddingLeft">171dip</dimen>
+    <dimen name="screenless_option_layout_viewpager_paddingRight">171dip</dimen>
+    <dimen name="screenless_option_layout_button_layout_height">64dip</dimen>
+    <dimen name="screenless_option_layout_button_layout_marginBottom">105dip</dimen>
+    <dimen name="screenless_option_layout_button_layout_paddingLeft">50dip</dimen>
+    <dimen name="screenless_option_layout_button_layout_paddingRight">50dip</dimen>
+    <dimen name="screenless_option_layout_button_tip_textSize">26sp</dimen>
+    <dimen name="screenless_option_layout_current_count_textSize">26sp</dimen>
+    <dimen name="screenless_option_layout_limit_count_textSize">26sp</dimen>
+    <dimen name="screenless_option_item_layout_minHeight">120dp</dimen>
+    <dimen name="screenless_option_item_layout_circle_tv_width">120dp</dimen>
+    <dimen name="screenless_option_item_layout_circle_tv_height">120dp</dimen>
+    <dimen name="screenless_option_item_layout_circle_tv_textSize">30sp</dimen>
+    <dimen name="screen_manager_pager_item_minHeight">120dp</dimen>
+    <dimen name="screen_manager_pager_item_circle_tv_width">120dp</dimen>
+    <dimen name="screen_manager_pager_item_circle_tv_height">120dp</dimen>
+    <dimen name="screen_manager_pager_item_circle_tv_textSize">30sp</dimen>
+    <dimen name="screen_manager_current_screen_item_minHeight">120dp</dimen>
+    <dimen name="screen_manager_current_screen_item_circle_tv_width">120dp</dimen>
+    <dimen name="screen_manager_current_screen_item_circle_tv_height">120dp</dimen>
+    <dimen name="screen_manager_current_screen_item_circle_tv_textSize">30sp</dimen>
+
+    <!-- Title View -->
+    <dimen name="main_title_margin_top">22dp</dimen>
+    <dimen name="main_title_margin_right">26dp</dimen>
+    <dimen name="main_title_txt_size">24sp</dimen>
+    <dimen name="main_title_msg_img_margin_left">13dp</dimen>
+    <dimen name="main_title_msg_img_margin_top">2dp</dimen>
+    <dimen name="main_title_usb_margin_left">13dp</dimen>
+    <dimen name="main_title_usb_margin_top">2dp</dimen>
+    <dimen name="main_title_cart_margin_left">13dp</dimen>
+    <dimen name="main_title_cart_margin_top">2dp</dimen>
+    <dimen name="main_title_network_margin_left">13dp</dimen>
+    <dimen name="main_title_icon_marginLeft">26dp</dimen>
+    <dimen name="main_title_ampm_time_marginLeft">2dp</dimen>
+    <dimen name="main_title_ampm_time_textSize">12sp</dimen>
+    <dimen name="main_title_divider_width">0.66dp</dimen>
+    <dimen name="main_title_divider_height">16dp</dimen>
+    <dimen name="main_title_divider_marginLeft">16dip</dimen>
+    <dimen name="main_title_divider_marginRight">16dip</dimen>
+    <dimen name="main_title_divider_marginTop">8dip</dimen>
+    <dimen name="main_title__weather_layout_marginLeft">4dp</dimen>
+    <dimen name="main_title_weather_unit_marginLeft">2dp</dimen>
+    <dimen name="main_title_weather_width">34dp</dimen>
+    <dimen name="main_title_weather_height">34dp</dimen>
+    <!-- Title View end -->
+
+
+    <!-- notification msg -->
+    <dimen name="notificatoin_whole_top_margin">56dp</dimen>
+    <dimen name="notificatoin_user_layout_height">100dp</dimen>
+    <dimen name="notificatoin_user_icon_padding_bottom">12dp</dimen>
+    <dimen name="notificatoin_user_icon_height">88dp</dimen>
+    <dimen name="notificatoin_user_icon_width">88dp</dimen>
+    <dimen name="notificatoin_user_status_grade_action_margin_left">12dp</dimen>
+    <dimen name="notificatoin_user_name_grade_margin_left">12dp</dimen>
+    <dimen name="notificatoin_user_grade_txt_margin_left">16dp</dimen>
+    <dimen name="notificatoin_user_grade_txt_margin_bottom">3dp</dimen>
+    <dimen name="notificatoin_msg_margin_left">60dp</dimen>
+    <dimen name="notificatoin_function__height">121dp</dimen>
+    <dimen name="notificatoin_function__margin_top">8dp</dimen>
+    <dimen name="notification_layout_network_width">160dp</dimen>
+    <dimen name="notificatoin_network_name_margin_top">8dp</dimen>
+    <dimen name="notification_layout_usb_margin_top">4dp</dimen>
+    <dimen name="notification_usb_name_margin_top">8dp</dimen>
+    <dimen name="notification_cart_name_margin_top">8dp</dimen>
+    <dimen name="notification_cart_num_margin_right">41dp</dimen>
+    <dimen name="notification_cart_num_margin_top">1dp</dimen>
+    <dimen name="notification_layout_weather_width">266dp</dimen>
+    <dimen name="notification_layout_calendar_width">225dp</dimen>
+    <dimen name="notification_user_icon_radius">44dp</dimen>
+    <dimen name="notification_msg_mark_read_view_padding_bottom">45dp</dimen>
+    <dimen name="notification_msg_mark_read_view_padding_left">20dp</dimen>
+    <dimen name="notification_weather_margin_left">22dp</dimen>
+    <dimen name="notification_weather_icon_width">94dp</dimen>
+    <dimen name="notification_weather_icon_height">94dp</dimen>
+    <dimen name="notification_layout_no_weather_height">90dp</dimen>
+    <dimen name="notification_layout_no_weather_margin_right">32dp</dimen>
+    <dimen name="notification_weather_city_padding_left">6dp</dimen>
+    <dimen name="notification_msg_item_padding_left">10dp</dimen>
+    <dimen name="notification_msg_item_padding_bottom">47dp</dimen>
+    <dimen name="notification_msg_item_padding_top">60dp</dimen>
+    <dimen name="notification_msg_item_txt_content_padding">28dp</dimen>
+    <dimen name="notification_msg_item_txt_time_margin_left">20dp</dimen>
+    <dimen name="notification_msg_txt_type_name_margin_left">18dp</dimen>
+    <dimen name="notification_msg_txt_type_name_margin_right">18dp</dimen>
+    <dimen name="notification_msg_txt_type_name_margin_top">6dp</dimen>
+    <dimen name="notification_msg_item_txt_icon_width">30dp</dimen>
+    <dimen name="notification_msg_item_txt_icon_height">30dp</dimen>
+    <dimen name="notification_msg_item_img_time_margin_left">20dp</dimen>
+    <dimen name="notification_msg_item_img_time_textSize">16sp</dimen>
+    <dimen name="notification_msg_img_txt_margin_left">18dp</dimen>
+    <dimen name="notification_msg_img_txt_margin_right">18dp</dimen>
+    <dimen name="notification_msg_img_txt_margin_top">6dp</dimen>
+    <dimen name="notification_msg_img_txt_textSize">20sp</dimen>
+    <dimen name="notification_notification_msg_item_all_padding_bottom">47dp</dimen>
+    <dimen name="notification_notification_msg_item_all_padding_left">20dp</dimen>
+    <dimen name="notification_notification_msg_item_all_txt">26sp</dimen>
+    <dimen name="notification_msg_item_txt_time_textSize">16sp</dimen>
+    <dimen name="notification_msg_txt_type_name_textSize">20sp</dimen>
+    <dimen name="notificatoin_whole_side_margin">80dp</dimen>
+    <dimen name="notificatoin_network_side_margin">80dp</dimen>
+    <dimen name="notificatoin_msg_hlist_height">369dp</dimen>
+    <dimen name="notificatoin_msg_hlist_width">1220dp</dimen>
+    <dimen name="notificatoin_msg_item_width">334dp</dimen>
+    <dimen name="notificatoin_msg_item_height">243dp</dimen>
+    <dimen name="notificatoin_msg_item_img_width">321dp</dimen>
+    <dimen name="notificatoin_msg_item_img_height_more">161dp</dimen>
+    <dimen name="notificatoin_msg_item_img_height">160dp</dimen>
+    <dimen name="notification_weather_weather_degree_unit_textSize">60sp</dimen>
+    <dimen name="notification_msg_mark_read_image_height">80dp</dimen>
+    <dimen name="notification_msg_mark_read_image_marginTop">17dp</dimen>
+    <dimen name="notification_msg_mark_read_txt_marginTop">17dp</dimen>
+    <dimen name="notification_msg_mark_read_txt_textSize">20sp</dimen>
+    <dimen name="notification_msg_item_txt_content_txt_textSize">20sp</dimen>
+    <dimen name="notification_user_name_textSize">36sp</dimen>
+    <dimen name="notification_user_grade_txt_textSize">16sp</dimen>
+    <dimen name="notification_network_name_textSize">20sp</dimen>
+    <dimen name="notification_usb_name_textSize">20sp</dimen>
+    <dimen name="notification_cart_name_textSize">20sp</dimen>
+    <dimen name="notification_cart_num_textSize">12sp</dimen>
+    <dimen name="notification_focusview_width">0dip</dimen>
+    <dimen name="notification_focusview_height">0dip</dimen>
+    <dimen name="notification_notification_indicator_marginBottom">26dp</dimen>
+    <dimen name="notification_date_title_time_textSize">60sp</dimen>
+    <dimen name="notification_date_ampm_time_textSize">20sp</dimen>
+    <dimen name="notification_msg_mark_read_image_width">84dp</dimen>
+    <dimen name="notification_weather_no_weather_textSize">20sp</dimen>
+    <dimen name="notification_weather_weather_city_textSize">20sp</dimen>
+    <dimen name="notification_data_week_day_textSize">20sp</dimen>
+    <dimen name="notification_data_ampm_time_margin_bottom">6dp</dimen>
+    <dimen name="notification_data_ampm_time_margin_left">2dp</dimen>
+     <dimen name="notification_msg_item_shadow_right_left">6.6dp</dimen>
+    <dimen name="notification_msg_item_shadow_bottom">8dp</dimen>
+    <!-- notification msg end -->
+
+
+    <!--  -->
+    <dimen name="desktop_manager_circle_space">7dip</dimen>
+
+</resources>

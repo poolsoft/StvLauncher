@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.xstv.desktop.app.widget.PosterRecyclerView
+        android:id="@+id/poster_workspace_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:background="@null"
+        android:clipToPadding="false"
+        android:descendantFocusability="afterDescendants"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:overScrollMode="never"
+        android:paddingBottom="@dimen/poster_recycerview_padding_bottom"
+        android:paddingLeft="@dimen/poster_recycerview_padding_left"
+        android:paddingRight="@dimen/poster_recycerview_padding_right"
+        android:paddingTop="@dimen/poster_recycerview_padding_top" />
+</merge>

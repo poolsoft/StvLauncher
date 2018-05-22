@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        applicationId "com.xstv.launcher"
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation files('libs/okhttp-3.2.0.jar')
+    implementation files('libs/greendao-2.2.1.jar')
+    implementation 'com.google.code.gson:gson:2.8.0'
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support:leanback-v17:27.1.1'
+    implementation 'com.android.support:preference-leanback-v17:27.1.1'
+    implementation 'com.android.support:recommendation:27.1.1'
+    implementation 'com.google.android.exoplayer:exoplayer:2.6.1'
+    implementation 'com.google.android.exoplayer:extension-leanback:2.6.1'
+    implementation project(':libraryPrj:base')
+    implementation project(':desktop:desktop_app')
+    implementation project(':desktop:desktop_leanback')
+}

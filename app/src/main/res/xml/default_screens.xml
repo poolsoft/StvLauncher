@@ -1,0 +1,52 @@
+<Launcher>
+    <screen>
+        <name>Demo</name>
+        <packageName>com.xstv.desktop.example</packageName>
+        <fileName>null</fileName>
+        <versionCode>2018041816</versionCode>
+        <versionName>2.5.0.004</versionName>
+        <sortable>1</sortable>
+        <removable>1</removable>
+        <showOnTab>1</showOnTab>
+        <pluginType/>
+        <local>1</local>
+        <md5>FCF06939515BAC666DA0DC13F06D7CAE</md5>
+        <notSupport/>
+        <forceUpdate>0</forceUpdate>
+        <order>0</order>
+    </screen>
+
+    <screen>
+        <name>其它</name>
+        <packageName>com.xstv.desktop.other</packageName>
+        <fileName>null</fileName>
+        <versionCode>2018041816</versionCode>
+        <versionName>2.5.0.004</versionName>
+        <sortable>1</sortable>
+        <removable>1</removable>
+        <showOnTab>1</showOnTab>
+        <pluginType/>
+        <local>1</local>
+        <md5>FCF06939515BAC666DA0DC13F06D7CAE</md5>
+        <notSupport/>
+        <forceUpdate>0</forceUpdate>
+        <order>1</order>
+    </screen>
+
+    <screen>
+        <name>应用桌面</name>
+        <packageName>com.xstv.desktop.app</packageName>
+        <fileName>null</fileName>
+        <versionCode>2018041816</versionCode>
+        <versionName>2.5.0.004</versionName>
+        <sortable>1</sortable>
+        <removable>1</removable>
+        <showOnTab>1</showOnTab>
+        <pluginType/>
+        <local>1</local>
+        <md5>FCF06939515BAC666DA0DC13F06D7CAE</md5>
+        <notSupport/>
+        <forceUpdate>0</forceUpdate>
+        <order>2</order>
+    </screen>
+</Launcher>

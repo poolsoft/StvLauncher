@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="LogReport">
+        <attr name="logPosition" format="integer"/>
+    </declare-styleable>
+
+    <!--<declare-styleable name="CellView">
+        <attr name="cellWidth" format="dimension"/>
+        <attr name="cellHeight" format="dimension"/>
+    </declare-styleable>-->
+
+    <declare-styleable name="CircleProgress">
+        <attr name="padding" format="dimension"/>
+        <attr name="startAngle" format="integer"/>
+        <attr name="radius" format="dimension"/>
+        <attr name="circleMarginTop" format="dimension"/>
+        <attr name="circleStrokeWidth" format="dimension"/>
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/folder_title_layout"
+        android:layout_width="1338px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="120px"
+        android:layout_marginRight="120px"
+        android:layout_marginTop="20px"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/folder_edit_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/press_center_key_to_uninstall"
+            android:textColor="@color/white_forty"
+            android:textSize="40px" />
+
+        <TextView
+            android:id="@+id/folder_edit_title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@drawable/app_edit_state_title_back"
+            android:text="@string/exit"
+            android:textColor="@color/white_forty"
+            android:textSize="40px" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/app_folder_workspace_title"
+        android:layout_width="1338px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="75px"
+        android:background="@color/transparent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:maxLength="12"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/edit_color"
+        android:textSize="39px" />
+
+    <View
+        android:id="@+id/app_folder_line"
+        android:layout_width="1338px"
+        android:layout_height="1px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150px"
+        android:background="@color/white_forty" />
+
+    <RelativeLayout
+        android:id="@+id/folder_top_container"
+        android:layout_width="1338px"
+        android:layout_height="80px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="90px"
+        android:background="@drawable/app_folder_title_edit_bg"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/folder_top_icon"
+            android:layout_width="100px"
+            android:layout_height="65px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="95px"
+            android:background="@color/transparent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:text="@string/back_to_home"
+            android:textSize="39px" />
+
+    </RelativeLayout>
+
+    <!-- 4*(312+30) = 1368 -->
+    <com.xstv.desktop.app.widget.AppRecyclerView
+        android:id="@+id/app_folder_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@null"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:descendantFocusability="afterDescendants"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingLeft="291px"
+        android:paddingRight="261px"
+        android:paddingTop="220px" />
+
+    <ImageView
+        android:id="@+id/animation_view"
+        android:layout_width="312px"
+        android:layout_height="176px"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:visibility="invisible" />
+</merge>

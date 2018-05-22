@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tab="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_launcher_bg"
+    android:clipChildren="false"
+    android:descendantFocusability="afterDescendants">
+
+    <com.xstv.launcher.ui.widget.ViewPagerSpace
+        android:id="@+id/metro_space"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:drawingCacheQuality="auto"
+        android:persistentDrawingCache="all" />
+
+    <com.xstv.launcher.ui.widget.TabSpace
+        android:id="@+id/tabspace"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tabspace_layout_height"
+        android:layout_marginTop="@dimen/tabspace_layout_margin_top"
+        android:paddingLeft="@dimen/tabspace_layout_padding_horizontal_leftedge"
+        android:paddingRight="@dimen/tabspace_layout_padding_horizontal_rightedge">
+
+        <ImageButton
+            android:id="@+id/manager_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/tabspace_manager_bt_height"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/tabspace_manager_bt_padding_bottom"
+            android:background="@drawable/bt_screen_manager_selector"
+            android:paddingLeft="@dimen/tabspace_manager_bt_padding"
+            android:paddingRight="@dimen/tabspace_manager_bt_padding"
+            android:scaleType="center"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/news_pop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_home_pop_news_number"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/activity_launcher_news_pop_text_size"
+            android:visibility="gone" />
+
+        <com.xstv.launcher.ui.widget.TabStripImpl
+            android:id="@+id/tab_strip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/activity_launcher_tab_strip_margin_right"
+            android:layout_toLeftOf="@id/manager_bt"
+            android:textColor="@drawable/title_tv_text_selector"
+            android:textSize="@dimen/activity_launcher_tab_strip_text_size"
+            tab:pstsTabBackground="@color/blue"
+            tab:pstsTabHeight="@dimen/activity_launcher_tab_strip_height"
+            tab:pstsTabPaddingLeftRight="@dimen/activity_launcher_tab_strip_padding_left" />
+    </com.xstv.launcher.ui.widget.TabSpace>
+
+    <View
+        android:id="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffff55"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/mem_stats_display"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="#889900"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/plugin_info_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/desktop_manager_bt_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/activity_launcher_tab_scrollview_padding_right"
+        android:layout_marginLeft="@dimen/activity_launcher_desktop_manager_margin_left"
+        android:layout_marginTop="@dimen/activity_launcher_desktop_manager_margin_top"
+        android:gravity="center"
+        android:paddingBottom="2dip"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:paddingTop="3dip"
+        android:text="@string/guide_manager_bt_tips"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/activity_launcher_desktop_manager_text_size"
+        android:visibility="gone" />
+
+</FrameLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:paddingLeft="80dp"
+    android:paddingRight="80dp"
+    android:paddingTop="100px"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/app_edit_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="@string/press_center_key_to_uninstall"
+        android:textColor="@color/white_forty"
+        android:textSize="40px" />
+
+    <TextView
+        android:id="@+id/app_edit_title_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:drawableLeft="@drawable/app_edit_state_title_back"
+        android:text="@string/exit"
+        android:textColor="@color/white_forty"
+        android:textSize="40px" />
+
+</RelativeLayout>

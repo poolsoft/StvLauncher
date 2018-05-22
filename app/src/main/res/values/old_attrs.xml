@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PieView">
+        <attr name="outRadius" format="integer"/>
+        <attr name="inRadius" format="integer"/>
+        <attr name="outColor" format="color"/>
+        <attr name="inColor" format="color"/>
+        <attr name="outAngle" format="integer"/>
+        <attr name="inAngle" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="CircleTextViewItem">
+        <attr name="focusBgColor" format="color" />
+        <attr name="focusFrameColor" format="color" />
+        <attr name="normalBgColor" format="color" />
+        <attr name="normalFrameColor" format="color" />
+        <attr name="frameWidth" format="dimension" />
+        <attr name="focusBig" format="boolean" />
+    </declare-styleable>
+    
+    <declare-styleable name="FocusProcess">
+        <attr name="initNarrow" format="float"/>
+        <attr name="resetByAni" format="boolean"/>
+        <attr name="duration" format="integer"/>
+        <attr name="pivotX" format="float"/>
+        <attr name="pivotY" format="float"/>
+        <attr name="shadowZ" format="integer"/>
+        <attr name="widgetRes" format="reference"/>
+        <attr name="widgetX" format="integer"/>
+        <attr name="widgetY" format="integer"/>
+        <attr name="finalNarrow" format="float"/>
+    </declare-styleable>
+    
+    <declare-styleable name="OrderCover">
+        <attr name="level" format="reference|reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="GridLayout">
+        <attr name="grid_column" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="TitleView">
+        <attr name="is_wp" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="MenuSwitcher">
+        <attr name="lable" format="reference" />
+        <attr name="entry" format="reference" />
+    </declare-styleable>
+
+    <!-- XML attributes used by default_workspace.xml -->
+    <declare-styleable name="Favorite">
+        <attr name="className" format="string" />
+        <attr name="packageName" format="string" />
+        <attr name="container" format="string" />
+        <attr name="screen" format="string" />
+        <attr name="textShow" format="string" />
+        <attr name="textSize" format="string" />
+        <attr name="textColor" format="string" />
+        <attr name="x" format="string" />
+        <attr name="y" format="string" />
+        <attr name="spanX" format="string" />
+        <attr name="spanY" format="string" />
+        <attr name="icon" format="reference" />
+        <attr name="title" format="reference" />
+        <attr name="uri" format="string" />
+    </declare-styleable>
+
+    <!--
+         Workspace specific attributes. These attributes are used to customize
+         the workspace in XML files.
+    -->
+    <declare-styleable name="Workspace">
+
+        <!-- The first screen the workspace should display. -->
+        <attr name="defaultScreen" format="integer" />
+        <!-- The number of horizontal cells in the CellLayout -->
+        <attr name="cellCountX" format="integer" />
+        <!-- The number of vertical cells in the CellLayout -->
+        <attr name="cellCountY" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="ViewPagerExtensions">
+        <attr name="fadeOutDelay" format="integer" />
+        <attr name="fadeOutDuration" format="integer" />
+        <attr name="textColorSelected" format="color" />
+        <attr name="lineColor" format="color" />
+        <attr name="lineColorSelected" format="color" />
+        <attr name="lineHeight" format="dimension" />
+        <attr name="lineHeightSelected" format="dimension" />
+        <attr name="dividerColor" format="color" />
+        <attr name="dividerMarginTop" format="dimension" />
+        <attr name="dividerMarginBottom" format="dimension" />
+        <attr name="dividerDrawable" format="reference" />
+        <attr name="outsideOffset" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="FocusCursor">
+        <attr name="cursorbg" format="reference"></attr>
+        <attr name="cursorbg_shawow_edge_w" format="dimension"></attr>
+        <attr name="cursorbg_shawow_edge_h" format="dimension"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="DynamicWidget">
+        <attr name="fromX" format="integer"></attr>
+        <attr name="fromY" format="integer"></attr>
+        <attr name="toX" format="integer"></attr>
+        <attr name="toY" format="integer"></attr>
+        <attr name="dur" format="integer"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="LogReport">
+        <attr name="logPosition" format="integer"></attr>
+    </declare-styleable>
+
+    <!-- the Launcher tab titles' attrs -->
+    <declare-styleable name="TabStripImpl">
+        <attr name="pstsTabPaddingLeftRight" format="dimension"/>
+        <attr name="pstsTabBackground" format="color"/>
+        <attr name="pstsTabHeight" format="dimension"/>
+        <attr name="pstsTextAllCaps" format="boolean"/>
+    </declare-styleable>
+
+    <!-- the timeview attrs -->
+    <declare-styleable name="TimeView">
+        <attr name="timeSize" format="dimension"/>
+        <attr name="aMpMSize" format="dimension"/>
+    </declare-styleable>
+
+</resources>

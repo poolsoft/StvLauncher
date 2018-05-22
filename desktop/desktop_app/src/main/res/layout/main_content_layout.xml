@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    android:focusableInTouchMode="false">
+
+    <com.xstv.desktop.app.widget.RecommPosterCellView
+        android:id="@+id/item_01"
+        style="@style/MainPosterViewStyle"
+        android:layout_marginLeft="0dp" />
+
+    <com.xstv.desktop.app.widget.RecommPosterCellView
+        android:id="@+id/item_02"
+        style="@style/MainPosterViewStyle" />
+
+    <com.xstv.desktop.app.widget.RecommPosterCellView
+        android:id="@+id/item_03"
+        style="@style/MainPosterViewStyle" />
+
+    <com.xstv.desktop.app.widget.RecommPosterCellView
+        android:id="@+id/item_04"
+        style="@style/MainPosterViewStyle" />
+
+    <com.xstv.desktop.app.widget.RecommPosterCellView
+        android:id="@+id/item_05"
+        style="@style/MainPosterViewStyle" />
+</merge>

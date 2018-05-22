@@ -1,0 +1,32 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 27
+
+
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    compileOnly project(':libraryPrj:base')
+    compileOnly 'com.github.bumptech.glide:glide:4.7.1'
+    compileOnly 'com.android.support:support-v4:27.1.1'
+    compileOnly 'com.android.support:leanback-v17:27.1.1'
+    compileOnly 'com.android.support:recyclerview-v7:27.1.1'
+    compileOnly 'com.google.android.exoplayer:exoplayer:2.6.1'
+    compileOnly 'com.google.android.exoplayer:extension-leanback:2.6.1'
+}

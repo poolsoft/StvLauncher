@@ -1,0 +1,6 @@
+<resources>
+
+    <item name="switch_immediately" type="id"/>
+    <item name="is_detached" type="id"/>
+
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/ly_cibn"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/launcher_loading_bar_ly_cibn_margin_top"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_launcher" />
+
+        <ProgressBar
+            android:layout_width="@dimen/launcher_loading_bar_progress_bar_width"
+            android:layout_height="@dimen/launcher_loading_bar_progress_bar_width"
+            android:layout_marginTop="@dimen/launcher_loading_bar_progress_bar_margin_top" />
+
+        <TextView
+            android:id="@+id/cibn_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/launcher_loading_bar_cibn_tips_margin_left"
+            android:layout_marginTop="@dimen/launcher_loading_bar_cibn_tips_margin_top"
+            android:text="@string/play_check_certification"
+            android:textColor="#ffffff"
+            android:textSize="26sp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_full"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/launcher_loading_bar_ly_full_margin_top"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="@dimen/launcher_loading_bar_pager_loading_width"
+            android:layout_height="@dimen/launcher_loading_bar_pager_loading_height"
+            android:layout_gravity="center"
+            android:indeterminateDrawable="@drawable/pager_loading_bar"
+            android:indeterminateDuration="2000" />
+
+        <TextView
+            android:id="@+id/full_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/launcher_loading_bar_full_tips_margin_top"
+            android:gravity="center"
+            android:text="@string/launcher_loading"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/launcher_loading_bar_full_tips_text_size" />
+    </LinearLayout>
+</RelativeLayout>

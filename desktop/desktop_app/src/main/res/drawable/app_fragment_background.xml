@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--非常重要！！！！   次文件是主题的占位图，不能修改此文件的名字，更不能删除此文件，修改会导致应用主题后显示不正常。如果非要修改联系wangyajun@le.com-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <gradient
+        android:endColor="@color/transparent"
+        android:startColor="@color/transparent" />
+</shape>

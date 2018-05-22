@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- TabSpace -->
+    <string name="tab_item_signalsource">Input</string>
+    <string name="tab_item_live">HOME</string>
+    <string name="tab_item_live_overseas">LIVE</string>
+    <string name="tab_item_vod">Video</string>
+    <string name="tab_item_search">Search</string>
+    <string name="tab_item_app">App</string>
+    <string name="tab_item_child">Kids</string>
+    <string name="tab_item_game">Game</string>
+    <string name="tab_item_sports">Sports</string>
+    <string name="tab_item_shopping">Shop</string>
+    <string name="tab_item_cinema">Theater</string>
+    <string name="tab_item_leview">New Video</string>
+    <string name="tab_item_membership">LeFamily</string>
+    <string name="tab_item_cibn">Selected</string>
+    <string name="tab_item_wasu">Wasu Video</string>
+    <string name="tab_item_more">More</string>
+
+
+    <!-- ui-frame -->
+    <string name="plugin_loading">Loading...</string>
+    <string name="launcher_loading">Loading...</string>
+    <string name="launcher_editing">Desktop is adjusting...</string>
+    <string name="plugin_error_bt_ok">OK</string>
+    <string name="plugin_error_bt_retry">Reload</string>
+    <string name="plugin_error_tips1">Failed to load the page</string>
+    <string name="plugin_error_tips2">Failed to show</string>
+    <string name="plugin_error_tips1_action">View other pages and try again later</string>
+    <string name="plugin_error_tips2_action">Recommendation update data to try</string>
+    <string name="plugin_haslocked">Desktop is locked</string>
+    <string name="plugin_input_pw">Password</string>
+    <string name="guide_manager_bt_tips">Customize the desktop here.</string>
+    <string name="guide_manager_bt_tips2">Restore the desktop here</string>
+
+    <string name="app_name">Desktop</string>
+    <!-- <string name="zero">"0"</string> -->
+    <!-- <string name="weather_c">℃</string> -->
+
+    <!-- Live Launcher-->
+    <!-- <string name="current_program">The current program: </string>
+    <string name="next_program">The next program: </string>
+    <string name="change_to_desktop_for_no_network">Switch to APP desktop for network errors</string> -->
+    <!-- Live Launcher Menu -->
+    <string name="weather_degree_unit_c">℃</string>
+    <string name="weather_degree_unit_f">℉</string>
+
+    <string name="switch_desktop_tip">Move the cursor to the circle area to switch to another desktop</string>
+    <string name="switch_desktop_tip_es">Move the hand cursor to the arrow button, make a fist to switch to another desktop</string>
+
+    <!-- 语音专用,不支持多语言,不许改字符串 -->
+    <string name="voice_message_prompt" translatable="false">消息栏</string>
+    <string name="voice_notification_prompt" translatable="false">通知栏</string>
+    <string name="voice_row_prompt" translatable="false">第1个</string>
+    <string name="voice_cell_prompt" translatable="false">第2排第1个</string>
+    <string name="voice_yes_prompt" translatable="false">确定</string>
+    <!-- 有问题,找初超 -->
+
+    <string name="week_sunday">Sunday</string>
+    <string name="week_monday">Monday</string>
+    <string name="week_tuesday">Tuesday</string>
+    <string name="week_wednesday">Wednesday</string>
+    <string name="week_thursday">Thursday</string>
+    <string name="week_friday">Friday</string>
+    <string name="week_saturday">Saturday</string>
+
+    <!-- notification message -->
+    <string name="network_disconnected">Not connected</string>
+    <string name="network_connected">Connected</string>
+    <string name="file_management">File manager</string>
+    <string name="file_device">Mobile devices: %s</string>
+    <string name="shopping_cart">Shopping cart</string>
+    <string name="login_info">Log in your account for better experience.</string>
+    <string name="action_login">Log in</string>
+    <string name="action_logout">Log out</string>
+    <string name="action_recharge">Membership renewal</string>
+    <string name="action_receive_member">Claim membership</string>
+    <string name="action_open_member">Activate membership</string>
+    <string name="action_new_benefit">Check the newly increased benefits</string>
+    <string name="mark_read">Mark all as read</string>
+    <string name="all_message">All messages</string>
+    <string name="msg_today">Today</string>
+    <string name="msg_today_before">%s day(s) ago</string>
+    <string name="msg_week_before">%s week(s) ago</string>
+    <string name="msg_month_before">%s month(s) ago</string>
+    <string name="msg_year_before">%s year(s) ago</string>
+    <string name="msg_type_system">System</string>
+    <string name="msg_type_application">App</string>
+    <string name="msg_type_tv">Video</string>
+    <string name="msg_type_normal">Common</string>
+
+    <string name="weather_no_info">No weather information at the moment</string>
+    <string name="msg_confirm_all">All messages will be marked as read. To view them, go to All messages.</string>
+    <string name="removed_msg_confirm">OK</string>
+    <string name="removed_msg_cancel">Cancel</string>
+
+    <string name="notification_tv_helper_start_time">this start elpased %ss, click to accelerate</string>
+    <string name="notification_tv_helper_accelerate">click to accelerate</string>
+    <string name="notification_tv_helper_device_memory_info">rom occupied %1$d%%, memory occupied %2$d%%</string>
+    <string name="notification_system_update">System Update</string>
+    <string name="notification_system_update_hint">NEW</string>
+    <string name="notification_message">Message</string>
+    <string name="notification_bind_tip">You have TV membership not received</string>
+
+    <!-- notification message end -->
+
+    <string name="developer_mode">Debugging mode</string>
+
+    <string name="password_length">Please enter a 4-digit number</string>
+    <string name="pwd_error">Incorrect password, please try again</string>
+    <string name="voice_prompt">Try to unlock with voice</string>
+    <string name="voice_prompt_text">Press and hold</string>
+    <string name="voice_prompt_text_content">key on remote control and say \"I am the parent\".</string>
+    <string name="forget_password">Forgot password</string>
+    <string name="letvsetpaswdtitle">Please enter the password for Parent lock</string>
+    <string name="letv_pwd">Password</string>
+
+    <string name="play_check_certification">Playing certification...</string>
+
+    <!-- screenless option -->
+    <string name="screenless_title">Desktop Acceleration</string>
+    <string name="screenless_top_tips">Set the commonly used desktops within %s to make sure the smooth experience. Desktop can be added in desktop manager.</string>
+    <string name="screenless_action_completed3">Submit</string>
+    <string name="screenless_toast_tip">The Desktop is mandatory</string>
+    <string name="screenless_dialog_tip" formatted="false">%s selected desktops, reducing to %s will improve the responding speed.</string>
+    <string name="screenless_dialog_ok">Ignore</string>
+    <string name="screenless_dialog_no">Faster response</string>
+    <string name="screenless_more_support_count">Maximum %s desktops can be supported</string>
+
+    <string name="desktio_crash_msg">%s is force closed, restarting...</string>
+    <string name="boot_page_dailog_content">Set %s as default desktop</string>
+    <string name="boot_page_dailog_ok">OK</string>
+    <string name="boot_page_dailog_cancel">Cancel</string>
+    <string name="boot_page_dailog_complete">Setting Successful</string>
+    <string name="boot_page_isbooted_msg">The Default Desktop is set</string>
+
+    <!-- common strting -->
+    <string name="dailog_ok">Yes</string>
+    <string name="dailog_cancel">No</string>
+
+    <string name="block_monitor_open_toast">Block Monitor Mode open, Please reboot system.</string>
+    <string name="block_monitor_close_toast">Block Monitor Mode close, Please reboot system.</string>
+    <string name="block_monitor_input_title">Please enter block time.</string>
+    <!--DeskTop Manager 6.0 -->
+    <string name="in_use">in use</string>
+    <string name="to_add">more</string>
+    <string name="set_main">set as default desktop</string>
+    <string name="already_main">already set as default desktop</string>
+    <string name="video_desktop">%sDesktop</string>
+    <string name="no_more_less">retain %d desktops at least</string>
+    <string name="coming_soon">coming_soon!!</string>
+    <string name="no_description">no description \ncoming soon</string>
+    <string name="touch_event_toast_mouse">do not support Air_Mouse</string>
+    <string name="touch_event_toast_gesture">do not support Gesture Mode</string>
+    <string name="auto_add_desk">Auto Add Desktop</string>
+    <string name="manager_on">On</string>
+    <string name="manager_off">Off</string>
+    <string name="manager_menu_hint">Press Menu for more options</string>
+    <string name="manager_description_app">Application Desktop provides system applications and downloads to third-party applications in local devices. You can manage your app flexibly by apping, apping, creating folders, and so on.</string>
+    <string name="manager_description_child">Children\'s table for the 0 to 12-year-old children to provide professional family education services, covering children\'s songs, animation, art, dance, English, Guoxue and other sub-areas. We are currently the most professional children\'s education platform, is committed to helping parents to accompany children to grow.</string>
+    <string name="manager_description_cinema">Cinema to create the same experience with the physical cinema experience, the first to provide users with the film and film schedule to synchronize the basic product services, allowing users to stay at home can watch the same period large tracts.</string>
+    <string name="manager_description_leview">LeView positioning in the build: boutique recommended + intelligent recommendation, thousands of thousands of face, the ecological video distribution platform.</string>
+    <string name="manager_description_live">Home (live) desktop to provide users with direct broadcast, rotation in the form of video services, content, including sports events, music concerts, brand conference and other rich real-time live, as well as a comprehensive category of exciting rotation. In addition to the rich content, the home page also includes a multi-angle, picture-in-picture, multi-channel playback and other innovative video features, to provide users with innovation, the ultimate new video viewing experience is the desktop has been the direction of the desktop.</string>
+    <string name="manager_description_membership">"My VIP" desktop is through the user in the big screen side boot log, the cumulative consumption of the VIP value obtained by the feedback, the higher the VIP value of the benefits can be obtained.</string>
+    <string name="manager_description_search">Search no boundaries, support video, music, games, application search direct; more intimate personalized recommendation, customized for the user exclusive content.</string>
+    <string name="manager_description_shopping">Shopping to create a new Internet scene shopping as the goal: everywhere shopping, the use of large-screen Focus, intelligent recommendation, based on the video scene purchase, to establish a home shopping needs to meet the new retail mall.</string>
+    <string name="manager_description_signal">Provide computer, digital TV, analog TV, HDMI and other external signal output.</string>
+    <string name="manager_description_sport">Sports desktops for sports fans to create, not only to provide users with a quick entry information to see the fast entry, as well as professional editor selected boutique sports content, more based on the user\'s preferences to recommend thousands of thousands of personalized theme content. Look at the game, there is a sports desktop enough.</string>
+    <string name="clear_desk_title">Clear desktop data</string>
+    <string name="clear_desk_dialog_text">System will delete desktop data permanently including desktop files, settings and databases</string>
+
+    <!-- DesktopManager old-->
+    <string name="manager_page_top_title">Manager</string>
+    <string name="manager_page_cur_screen_tips">Press OK to customize the desktop order. Press Up to set as default.</string>
+    <string name="manager_page_cannot_move">The order of Input cannot be rearranged</string>
+    <string name="manager_page_cannot_remove">The order of Input cannot be remove</string>
+    <string name="manager_page_max_count">It has added full</string>
+    <string name="manager_page_add_tips">Add %s and enter to view?</string>
+    <string name="manager_page_screen_notfound">Page not found, please try again later</string>
+    <string name="manager_page_dev_tip_reboot">Plugin[%s]has installed，please reboot</string>
+    <string name="manager_page_dev_tip_add">Plugin[%s]has installed</string>
+
+    <string name="dev_add_plugin">Select plugin apk file</string>
+
+    <string name="move_desktop_toast">At least %s desktops, please add</string>
+    <string name="delete_desktop_toast">Remove the desktop in use before adding other desktops</string>
+    <string name="auto_desktop_toast">Has been automatically added to %s desktops</string>
+
+    <string name="unread_message_count">Unread message count</string>
+    <string name="desktop_add_failed">Add desktop failed</string>
+    <string name="desktop_add_success">Add desktop success</string>
+    <string name="desktop_manger_keep_default_desktop">Default desktop cannot be remove</string>
+
+</resources>
