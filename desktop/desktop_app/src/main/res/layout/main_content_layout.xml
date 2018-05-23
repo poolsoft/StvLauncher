@@ -22,7 +22,7 @@
         android:id="@+id/item_04"
         style="@style/MainPosterViewStyle" />
 
-    <com.xstv.desktop.app.widget.RecommPosterCellView
+<!--    <com.xstv.desktop.app.widget.RecommPosterCellView
         android:id="@+id/item_05"
-        style="@style/MainPosterViewStyle" />
+        style="@style/MainPosterViewStyle" />-->
 </merge>

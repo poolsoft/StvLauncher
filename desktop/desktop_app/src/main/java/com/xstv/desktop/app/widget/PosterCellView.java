@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.xstv.base.LetvLog;
 import com.xstv.desktop.app.AppPluginActivator;
 import com.xstv.desktop.app.R;
@@ -63,25 +64,35 @@ public abstract class PosterCellView extends BaseCellView<ItemInfo> {
     }
 
     public void setEcoImageView(ImageView ecoImageView, String iconPath) {
-        Glide.with(ecoImageView).load(iconPath);
+        LetvLog.d(TAG, "setEcoImageView===>" + iconPath);
+        RequestOptions myOptions = new RequestOptions()
+                .override(ecoImageView.getWidth(), ecoImageView.getHeight())
+                .error(R.drawable.pic_default);
+
+        Glide.with(getContext())
+                .applyDefaultRequestOptions(myOptions)
+                .load(iconPath)
+                .into(ecoImageView);
+
+        ecoImageView.setScaleType(ImageView.ScaleType.FIT_XY);
     }
 
     public void setPosterSimpleDraweeView(ImageView simpleDraweeView, String iconPath) {
         if (iconPath == null) {
             iconPath = "";
         }
-        Glide.with(simpleDraweeView).load(iconPath);
+        Glide.with(simpleDraweeView).load(iconPath).into(simpleDraweeView);
     }
 
     public void setLogoImageView(final ImageView ecoImageView, String iconPath) {
-        Glide.with(ecoImageView).load(iconPath);
+        Glide.with(ecoImageView).load(iconPath).into(ecoImageView);
     }
 
     public void setLogoSimpleDraweeView(final ImageView simpleDraweeView, String iconPath) {
         if (iconPath == null) {
             iconPath = "";
         }
-        Glide.with(simpleDraweeView).load(iconPath);
+        Glide.with(simpleDraweeView).load(iconPath).into(simpleDraweeView);
     }
 
     @Override

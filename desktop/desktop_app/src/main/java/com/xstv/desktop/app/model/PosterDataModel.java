@@ -58,6 +58,7 @@ public class PosterDataModel {
         loadDataFromServer(url, type, new ResultCallback<ContentPosBean>() {
             @Override
             public void requestSuccess(ContentPosBean contentPosBean, String jsonStr, int responseCode) {
+                LetvLog.i(TAG, "fetchPosterData requestSuccess");
                 if (contentPosBean.errno != UrlGenerator.POSID_SUCCESS_CODE || contentPosBean.data == null || contentPosBean.data.size() == 0) {
                     // 下发到的数据有错误
                     Log.e(TAG, "fetchPosterData errorno = " + contentPosBean.errno);
@@ -71,7 +72,8 @@ public class PosterDataModel {
 
             @Override
             public void onFailure() {
-                if(!isUpdate){
+                LetvLog.i(TAG, "fetchPosterData onFailure");
+                if (!isUpdate) {
                     handleFailureData();
                 }
             }

@@ -3,7 +3,6 @@ package com.xstv.desktop.app.widget;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.RectF;
 import android.os.Handler;
@@ -15,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.xstv.base.LetvLog;
 import com.xstv.desktop.app.R;
 import com.xstv.desktop.app.bean.PosterInfo;
 import com.xstv.desktop.app.db.ItemInfo;
@@ -49,11 +49,11 @@ public class RecommPosterCellView extends PosterCellView {
     @Override
     public void initView(Context context) {
         ViewGroup rootView = (ViewGroup) View.inflate(context, R.layout.recomm_poster_cellview_layout, this);
-        rootView.setBackgroundColor(Color.parseColor("#4caf50"));
         mShadeView = findViewById(R.id.shade);
         mTitleTV = (TextView) findViewById(R.id.poster_cellview_title);
         mSubTitleTV = (TextView) findViewById(R.id.poster_cellview_subtitle);
-        mTitleTV.setText("推荐位");
+
+        mTitleTV.setText("title");
 
         if (Utilities.verifySupportSdk(Utilities.support_sdk_version_100)) {
             mEcoImageView = new ImageView(context);
@@ -93,7 +93,7 @@ public class RecommPosterCellView extends PosterCellView {
     @Override
     public void bindData(ItemInfo itemInfo) {
         super.bindData(itemInfo);
-        // LetvLog.d(TAG, "bindData folderInfo = " + itemInfo + " url = " + itemInfo.getIconUrl());
+        //LetvLog.d(TAG, "bindData folderInfo = " + itemInfo + " url = ");
         if (mEcoImageView != null) {
             if (itemInfo == null) {
                 setEcoImageView(mEcoImageView, null);
@@ -101,6 +101,7 @@ public class RecommPosterCellView extends PosterCellView {
             }
             if (itemInfo instanceof PosterInfo) {
                 String iconUrl = ((PosterInfo) itemInfo).getIconUrl();
+                LetvLog.d(TAG, " iconUrl=" + iconUrl + " mEcoImageView=" + mEcoImageView.getVisibility());
                 if (iconUrl == null) {
                     setEcoImageView(mEcoImageView, null);
                 } else {

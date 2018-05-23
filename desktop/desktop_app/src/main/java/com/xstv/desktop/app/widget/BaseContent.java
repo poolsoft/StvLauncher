@@ -55,13 +55,13 @@ public abstract class BaseContent extends LinearLayout {
                 }
                 if (k < dataSize) {
                     ItemInfo itemInfo = itemList.get(k);
-                    LetvLog.d(TAG, "bindData itemInfo = " + itemInfo);
+                    //LetvLog.d(TAG, "bindData itemInfo = " + itemInfo);
                     baseCellView.bindData(itemInfo);
                 } else {
                     baseCellView.bindData(null);
                 }
                 String tag = (String) getTag();
-                LetvLog.d(TAG, "bindData tag = " + tag);
+                //LetvLog.d(TAG, "bindData tag = " + tag);
                 baseCellView.setTag(tag + "," + k);
                 k++;
             }

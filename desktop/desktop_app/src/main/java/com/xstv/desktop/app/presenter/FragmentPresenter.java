@@ -17,6 +17,7 @@ import com.xstv.base.async.ThreadPool;
 import com.xstv.desktop.app.AppPluginActivator;
 import com.xstv.desktop.app.bean.ContentBean;
 import com.xstv.desktop.app.bean.FolderInfo;
+import com.xstv.desktop.app.bean.PosterInfo;
 import com.xstv.desktop.app.db.ItemInfo;
 import com.xstv.desktop.app.interfaces.DataChangeObserver;
 import com.xstv.desktop.app.interfaces.PosterDataModelCallback;
@@ -129,12 +130,12 @@ public class FragmentPresenter extends BasePresenter<OnDataChangeListener> imple
     }
 
     public void updateData() {
-        if(!isNotifyUI || isFetchedDataAfter16 || (isNotifyUI && !isServerDataLoaded)){
+        if (!isNotifyUI || isFetchedDataAfter16 || (isNotifyUI && !isServerDataLoaded)) {
             LetvLog.i(TAG, "updateData no need update Data");
             return;
         }
 
-        if(isCurrentTimeAfter16()){
+        if (isCurrentTimeAfter16()) {
             LetvLog.i(TAG, "updateData start update Data.");
             PosterDataModel.getInstance().fetchPosterData(true);
         }
@@ -157,12 +158,12 @@ public class FragmentPresenter extends BasePresenter<OnDataChangeListener> imple
                 list.clear();
                 list.addAll(contentBeanList);
                 isServerDataLoaded = true;
-                if(isUpdate){
+                if (isUpdate) {
                     if (isViewAttached()) {
                         isFetchedDataAfter16 = isCurrentTimeAfter16();
                         getView().onNotifyUI(contentBeanList, true, null);
                     }
-                }else{
+                } else {
                     notifyUI();
                 }
             }
@@ -195,7 +196,7 @@ public class FragmentPresenter extends BasePresenter<OnDataChangeListener> imple
         for (ItemInfo itemInfo : itemList) {
             if (itemInfo instanceof FolderInfo) {
                 IconFilterUtil.createFolderItemIconBitmap((FolderInfo) itemInfo);
-            }else{
+            } else {
                 if (IconFilterUtil.isUsedTheme()) {
                     IconFilterUtil.createIconBitmap(itemInfo);
                 } else {
@@ -206,15 +207,15 @@ public class FragmentPresenter extends BasePresenter<OnDataChangeListener> imple
     }
 
 
-    private void notifyUI(){
+    private void notifyUI() {
         LetvLog.i(TAG, "notifyUI isLocalDataLoaded = " + isLocalDataLoaded + " isServerDataLoaded = " + isServerDataLoaded);
-        if(!isLocalDataLoaded){
+        if (!isLocalDataLoaded) {
             return;
         }
         List<ContentBean> contentbeanList = null;
-        if(!isServerDataLoaded){
+        if (!isServerDataLoaded) {
             contentbeanList = createNullPosterList();
-        }else{
+        } else {
             contentbeanList = DataModelList.getInstance().contentBeanList;
         }
         isNotifyUI = true;
@@ -224,11 +225,50 @@ public class FragmentPresenter extends BasePresenter<OnDataChangeListener> imple
         }
     }
 
-    private List<ContentBean> createNullPosterList(){
+    private List<ContentBean> createNullPosterList() {
         List<ContentBean> contentBeanList = new ArrayList<ContentBean>(2);
         for (int i = 0; i < 2; i++) {
             ContentBean contentBean = new ContentBean();
+            contentBean.setTitle("title");
+            contentBean.setPosid("posId");
+            contentBean.setSubTitle("subTitle");
+
+            List<ItemInfo> itemInfos = new ArrayList<>();
+            PosterInfo post1 = new PosterInfo();
+            post1.setFirstTitle("测试数据1");
+            post1.setIconUrl("https://wx4.sinaimg.cn/mw690/006v3HKJgy1frdb1ff66cj318g270e81.jpg");
+            post1.setLogoUrl("");
+            itemInfos.add(post1);
+
+            PosterInfo post2 = new PosterInfo();
+            post2.setFirstTitle("测试数据2");
+            post2.setIconUrl("https://wx4.sinaimg.cn/mw690/006v3HKJgy1frdb1eohg7j30jg163adt.jpg");
+            post2.setLogoUrl("");
+            itemInfos.add(post2);
+
+            PosterInfo post3 = new PosterInfo();
+            post3.setFirstTitle("测试数据3");
+            post3.setIconUrl("https://wx3.sinaimg.cn/mw690/006v3HKJgy1frdb1epd5gj30jg0yl77v.jpg");
+            post3.setLogoUrl("");
+            itemInfos.add(post3);
+
+            PosterInfo post4 = new PosterInfo();
+            post4.setFirstTitle("测试数据4");
+            post4.setIconUrl("https://wx3.sinaimg.cn/mw690/006v3HKJgy1frdb1ewudhj30jg0yldjr.jpg");
+            post4.setLogoUrl("");
+            itemInfos.add(post4);
+
+            PosterInfo post5 = new PosterInfo();
+            post5.setFirstTitle("测试数据5");
+            post5.setIconUrl("https://wx1.sinaimg.cn/mw690/006v3HKJgy1frdb1ewnfij31kw2dcn8j.jpg");
+            post5.setLogoUrl("");
+            itemInfos.add(post5);
+
+            contentBean.setContentItemList(itemInfos);
             contentBeanList.add(contentBean);
+            if (i == 0) {
+                break;
+            }
         }
         return contentBeanList;
     }

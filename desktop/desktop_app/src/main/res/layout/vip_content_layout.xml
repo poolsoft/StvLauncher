@@ -21,8 +21,8 @@
     <com.xstv.desktop.app.widget.RecommPosterCellView
         android:id="@+id/item_04"
         style="@style/VipPosterViewStyle" />
-
+<!--
     <com.xstv.desktop.app.widget.RecommPosterCellView
         android:id="@+id/item_05"
-        style="@style/VipPosterViewStyle" />
+        style="@style/VipPosterViewStyle" />-->
 </merge>

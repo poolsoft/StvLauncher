@@ -53,11 +53,12 @@ public class AppWorkspaceAdapter extends BaseSpaceAdapter<ItemInfo> {
     }
 
     public void setHeaderData(List<ContentBean> list) {
+        LetvLog.d(TAG, "setHeaderData " + list.size());
         mHeaderList.clear();
         mHeaderList.addAll(list);
     }
 
-    public void updateHeader(List<ContentBean> list){
+    public void updateHeader(List<ContentBean> list) {
         setHeaderData(list);
         notifyItemRangeChanged(0, getHeaderSize());
     }
@@ -76,9 +77,9 @@ public class AppWorkspaceAdapter extends BaseSpaceAdapter<ItemInfo> {
         if (getHeaderSize() > 0) {
             if (position == 0) {
                 return ITEM_TYPE_HEADER1;
-            } else if (position == 1) {
-                return ITEM_TYPE_HEADER2;
-            } else {
+            }/* else if (position == 1) {
+                return ITEM_TYPE_HEADER1;//ITEM_TYPE_HEADER2;
+            } */else {
                 position = position - getHeaderSize();
             }
         }
@@ -157,7 +158,7 @@ public class AppWorkspaceAdapter extends BaseSpaceAdapter<ItemInfo> {
             return -1;
         }
         int index = getDataSet().indexOf(fromBean);
-        if(index != -1){
+        if (index != -1) {
             index += getHeaderSize();
         }
         return index;
@@ -211,7 +212,7 @@ public class AppWorkspaceAdapter extends BaseSpaceAdapter<ItemInfo> {
         }
 
         int removeIndex = getDataSet().indexOf(itemInfo);
-        if(removeIndex != -1){
+        if (removeIndex != -1) {
             getDataSet().remove(itemInfo);
             removeIndex += getHeaderSize();
             notifyItemRemoved(removeIndex);
@@ -262,11 +263,11 @@ public class AppWorkspaceAdapter extends BaseSpaceAdapter<ItemInfo> {
             if (bean instanceof FolderInfo) {
                 if (((FolderInfo) bean).getLength() == 0) {
                     int nullIndex = getDataSet().indexOf(bean);
-                    if(nullIndex != -1){
+                    if (nullIndex != -1) {
                         LetvLog.d(TAG, " removeNUllFolder bean = " + bean);
                         getDataSet().remove(bean);
                         List<ItemInfo> allAppList = DataModelList.getInstance().allAppList;
-                        if(allAppList != null){
+                        if (allAppList != null) {
                             allAppList.remove(bean);
                         }
                         nullIndex += getHeaderSize();

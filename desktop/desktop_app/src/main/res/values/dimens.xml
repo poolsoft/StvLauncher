@@ -10,7 +10,7 @@
     <dimen name="poster_recycerview_padding_right">80dp</dimen>
     <dimen name="poster_recycerview_padding_top">30dp</dimen>
     <dimen name="poster_recycerview_padding_bottom">30dp</dimen>
-    <dimen name="poster_workspace_item_width1">208dp</dimen>
+    <dimen name="poster_workspace_item_width1">188dp</dimen><!--208-->
     <dimen name="poster_workspace_item_height1">156dp</dimen>
     <dimen name="poster_workspace_item_height2">117dp</dimen>
     <dimen name="poster_workspace_item_height3">277dp</dimen>
