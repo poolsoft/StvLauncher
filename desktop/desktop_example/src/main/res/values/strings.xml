@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">desktop_example</string>
+    <string name="app_name">PluginDemo</string>
+    <string name="empty">Empty desktop, just for test!</string>
 </resources>

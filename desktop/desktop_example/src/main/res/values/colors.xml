@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="item_bg_focus">#889900</color>
+    <color name="item_bg_press">#999900</color>
+    <color name="item_bg_disable">#119900</color>
+    <color name="item_bg_normal">#000000</color>
+</resources>

@@ -15,4 +15,5 @@ android {
 
 dependencies {
     compileOnly "com.android.support:support-v4:${rootProject.ext.SUPPORT_VERSION}"
+    compileOnly "com.squareup.okhttp3:okhttp:${rootProject.ext.OKHTTP_VERSION}"
 }
