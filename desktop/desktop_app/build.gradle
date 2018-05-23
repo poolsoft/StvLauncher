@@ -1,16 +1,8 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 27
-
-
-
-    defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 27
-        versionCode 1
-        versionName "1.0"
-    }
+    compileSdkVersion rootProject.ext.COMPILE_SDK_VERSION
+    buildToolsVersion rootProject.ext.BUILD_TOOLS_VERSION
 
     buildTypes {
         release {
@@ -22,12 +14,14 @@ android {
 }
 
 dependencies {
-    compileOnly files('libs/greendao-2.2.1.jar')
-    compileOnly files('libs/okhttp-3.2.0.jar')
-    compileOnly 'com.android.support:leanback-v17:27.1.1'
-    compileOnly 'com.android.support:support-v4:27.1.1'
-    compileOnly 'com.android.support:recyclerview-v7:27.1.1'
-    compileOnly 'com.github.bumptech.glide:glide:4.7.1'
-    compileOnly 'com.google.code.gson:gson:2.8.0'
+    //引用3方库
+    compileOnly "com.google.code.gson:gson:${rootProject.ext.GSON_VERSION}"
+    compileOnly "com.squareup.okhttp3:okhttp:${rootProject.ext.OKHTTP_VERSION}"
+    compileOnly "org.greenrobot:greendao:${rootProject.ext.GREEDDAO_VERSION}"
+    compileOnly "com.github.bumptech.glide:glide:${rootProject.ext.GLIDE_VERSION}"
+    compileOnly "com.android.support:recyclerview-v7:${rootProject.ext.SUPPORT_VERSION}"
+    compileOnly "com.android.support:support-v4:${rootProject.ext.SUPPORT_VERSION}"
+
+    //引用基础库
     compileOnly project(':libraryPrj:base')
 }

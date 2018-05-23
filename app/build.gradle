@@ -1,36 +1,81 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion '27.0.3'
+    compileSdkVersion rootProject.ext.COMPILE_SDK_VERSION
+    buildToolsVersion rootProject.ext.BUILD_TOOLS_VERSION
     defaultConfig {
-        applicationId "com.xstv.launcher"
-        minSdkVersion 21
-        targetSdkVersion 27
-        versionCode 1
-        versionName "1.0"
+        applicationId rootProject.ext.APPLICATION_ID
+        minSdkVersion rootProject.ext.MIN_SDK_VERSION
+        targetSdkVersion rootProject.ext.TARGET_SDK_VERSION
+        versionCode rootProject.ext.VERSION_CODE
+        versionName rootProject.ext.VERSION_NAME
     }
+
+    //签名文件
+    signingConfigs {
+        release {
+            storeFile file('debug.keystore')
+            storePassword 'android'
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+        }
+    }
+
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled rootProject.ext.MINIFY_ENABLED
+            shrinkResources false
+            zipAlignEnabled true //4字节对齐，优化内存
+            //signingConfig signingConfigs.release
+
+            buildConfigField("boolean", "LOG_DEBUG", "true")
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+        }
+        debug {
+            minifyEnabled rootProject.ext.MINIFY_ENABLED
+            shrinkResources false
+            zipAlignEnabled true
+            //signingConfig signingConfigs.release
+
+            buildConfigField("boolean", "LOG_DEBUG", "false")
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //指定输出apk样式
+    applicationVariants.all { variant ->
+        if (variant.buildType.name == "release" || variant.buildType.name == "debug") {
+            variant.outputs.all {
+                def newName = "XstvLauncher-" + buildType.name + "-v" +
+                        defaultConfig.versionName + "-" + defaultConfig.versionCode + ".apk"
+                outputFileName = newName
+            }
         }
     }
 }
 
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
 dependencies {
-    implementation files('libs/okhttp-3.2.0.jar')
-    implementation files('libs/greendao-2.2.1.jar')
-    implementation 'com.google.code.gson:gson:2.8.0'
-    implementation 'com.github.bumptech.glide:glide:4.7.1'
-    implementation 'com.android.support:support-v4:27.1.1'
-    implementation 'com.android.support:recyclerview-v7:27.1.1'
-    implementation 'com.android.support:leanback-v17:27.1.1'
-    implementation 'com.android.support:preference-leanback-v17:27.1.1'
-    implementation 'com.android.support:recommendation:27.1.1'
-    implementation 'com.google.android.exoplayer:exoplayer:2.6.1'
-    implementation 'com.google.android.exoplayer:extension-leanback:2.6.1'
+    //3方库
+    implementation "com.google.code.gson:gson:${rootProject.ext.GSON_VERSION}"
+    implementation "com.squareup.okhttp3:okhttp:${rootProject.ext.OKHTTP_VERSION}"
+    implementation "org.greenrobot:greendao:${rootProject.ext.GREEDDAO_VERSION}"
+    implementation "com.github.bumptech.glide:glide:${rootProject.ext.GLIDE_VERSION}"
+    implementation "com.android.support:leanback-v17:${rootProject.ext.SUPPORT_VERSION}"
+    implementation "com.android.support:recyclerview-v7:${rootProject.ext.SUPPORT_VERSION}"
+    //TODO minSDK=23,是否还需要v4？
+    implementation "com.android.support:support-v4:${rootProject.ext.SUPPORT_VERSION}"
+
+    //基础库
     implementation project(':libraryPrj:base')
+
+    //子桌面
     implementation project(':desktop:desktop_app')
-    implementation project(':desktop:desktop_leanback')
+    implementation project(':desktop:desktop_example')
 }

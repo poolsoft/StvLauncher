@@ -1,17 +1,11 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-
 buildscript {
-    
+
     repositories {
         google()
         jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.2'
-        
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
     }
 }
 
@@ -24,4 +18,40 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+def generateVersionCode() {
+    def strTime = new Date().format("yyyyMMddHH", TimeZone.getTimeZone("GMT+8"))
+    return Integer.parseInt(strTime)
+}
+
+def generateVersionName() {
+    def cmd = 'git rev-list HEAD --first-parent --count'
+    cmd.execute().text.trim()
+}
+
+
+project.ext {
+    //应用程序包名
+    APPLICATION_ID = "com.xstv.launcher"
+    //最低支持Android版本
+    MIN_SDK_VERSION = 23
+    //目标版本
+    TARGET_SDK_VERSION = 23
+    //用于编译的SDK版本
+    COMPILE_SDK_VERSION = 27
+    //用于Gradle编译项目的工具版本
+    BUILD_TOOLS_VERSION = "27.0.3"
+    //设置是否使用混淆
+    MINIFY_ENABLED = false
+    //版本
+    VERSION_CODE = generateVersionCode()
+    VERSION_NAME = "0.0." + generateVersionName()
+
+    //3方库版本
+    SUPPORT_VERSION = '27.1.1'
+    GLIDE_VERSION = '4.7.1'
+    GREEDDAO_VERSION = '2.2.1'
+    OKHTTP_VERSION = '3.10.0'
+    GSON_VERSION = '2.8.5'
 }
