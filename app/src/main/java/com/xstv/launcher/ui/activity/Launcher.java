@@ -529,7 +529,6 @@ public class Launcher extends FragmentActivity implements FragmentActionHandler,
                     break;
                 }
                 if (mTitleView != null) {
-                    //FIXME-xubin mTitleView.show();
                     mTitleView.setVisibility(View.VISIBLE);
                 }
                 break;

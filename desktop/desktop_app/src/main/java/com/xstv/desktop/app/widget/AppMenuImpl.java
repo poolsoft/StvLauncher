@@ -48,7 +48,8 @@ public class AppMenuImpl implements IAppMenu {
                 switch (pos) {
                     case 0:
                         if (mOnMenuListener != null) {
-                            mOnMenuListener.moveApp();
+                            //mOnMenuListener.moveApp();
+                            mOnMenuListener.deleteApp();
                         }
                         break;
                     case 1:

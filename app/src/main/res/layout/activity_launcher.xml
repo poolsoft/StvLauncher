@@ -65,11 +65,11 @@
     <View
         android:id="@+id/title_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dip"
         android:background="#ffff55"
         android:focusable="false"
         android:focusableInTouchMode="false"
-        android:visibility="gone" />
+        android:visibility="visible" />
 
     <TextView
         android:id="@+id/mem_stats_display"

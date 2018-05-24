@@ -563,6 +563,7 @@ public class AppWorkspace extends BaseWorkspace<List<ItemInfo>> implements AppFo
         }
 
         mState = state;
+
         // update title
         updateEditTitle(state);
 
