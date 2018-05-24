@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="transparent">#00000000</color>
+    <color name="primary_holo_letv_info">#33ffffff</color>
+    <color name="primary_holo_letv_normal">#66ffffff</color>
+    <color name="primary_holo_letv_focused">#ffffffff</color>
+    <color name="primary_holo_letv_disable">#19ffffff</color>
+
+</resources>

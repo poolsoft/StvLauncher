@@ -28,6 +28,7 @@ import com.xstv.desktop.app.bean.FolderInfo;
 import com.xstv.desktop.app.db.ItemInfo;
 import com.xstv.desktop.app.db.ItemInfoDBHelper;
 import com.xstv.desktop.app.interfaces.IAppFragment;
+import com.xstv.desktop.app.listener.OnAppMenuListener;
 import com.xstv.desktop.app.model.AppDataModel;
 import com.xstv.desktop.app.model.DataModelList;
 import com.xstv.desktop.app.util.IconFilterUtil;
@@ -233,6 +234,7 @@ public class AppWorkspace extends BaseWorkspace<List<ItemInfo>> implements AppFo
     @Override
     public void initData() {
         super.initData();
+        appMenu.initAppItemMenu();
     }
 
     @Override
@@ -253,6 +255,38 @@ public class AppWorkspace extends BaseWorkspace<List<ItemInfo>> implements AppFo
                         isScrolling = true;
                         break;
                 }
+            }
+        });
+
+        appMenu.setOnAppMenuListener(new OnAppMenuListener() {
+            @Override
+            public void moveApp() {
+                updateEditState(State.STATE_MOVE, false);
+            }
+
+            @Override
+            public void addApp() {
+
+            }
+
+            @Override
+            public void newFolder() {
+                AppWorkspace.this.newFolder();
+            }
+
+            @Override
+            public void deleteApp() {
+                updateEditState(State.STATE_DELETE, false);
+            }
+
+            @Override
+            public void manageApp() {
+                AppWorkspace.this.manageApp();
+            }
+
+            @Override
+            public void feedBack() {
+                AppWorkspace.this.feedBack();
             }
         });
     }
@@ -406,6 +440,9 @@ public class AppWorkspace extends BaseWorkspace<List<ItemInfo>> implements AppFo
                 case KeyEvent.KEYCODE_MENU:
                     // Show menu only in normal state
                     if (mState == BaseWorkspace.State.STATE_NORMAL) {
+                        if (appMenu != null) {
+                            appMenu.showMenu();
+                        }
                     }
                     consumed = true;
                     break;
@@ -1182,6 +1219,9 @@ public class AppWorkspace extends BaseWorkspace<List<ItemInfo>> implements AppFo
         } else {
             mFocusedView = null;
             resetScroll();
+            if (appMenu != null) {
+                appMenu.hideMenu();
+            }
             consumed = false;
         }
         return consumed;

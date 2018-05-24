@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="LetvMenuItem">
+        <attr name="itemNormalIcon" format="reference" />
+        <attr name="itemFocusIcon" format="reference" />
+        <attr name="itemTitle" format="string" />
+        <attr name="itemDetail" format="string" />
+    </declare-styleable>
+
+</resources>

@@ -19,6 +19,7 @@ import com.xstv.desktop.app.R;
 import com.xstv.desktop.app.adapter.BaseSpaceAdapter;
 import com.xstv.desktop.app.interfaces.DataChangeObserver;
 import com.xstv.desktop.app.interfaces.IAppFragment;
+import com.xstv.desktop.app.interfaces.IAppMenu;
 import com.xstv.desktop.app.util.Utilities;
 
 import java.lang.ref.WeakReference;
@@ -32,6 +33,8 @@ public abstract class BaseWorkspace<T> extends FrameLayout implements DataChange
     }
 
     protected Context context;
+
+    protected IAppMenu appMenu;
 
     protected WeakReference<IAppFragment> fragmentRef;
 
@@ -61,6 +64,9 @@ public abstract class BaseWorkspace<T> extends FrameLayout implements DataChange
     public abstract void initView(Context context);
 
     public void initData() {
+
+        appMenu = new AppMenuImpl(context);
+
         RecyclerView recyclerView = getRecyclerView();
         recyclerView.setLayoutManager(getLayoutManager());
         recyclerView.setAdapter(getAdapter());
@@ -128,6 +134,9 @@ public abstract class BaseWorkspace<T> extends FrameLayout implements DataChange
 
     public void hide() {
         setVisibility(View.GONE);
+        if(appMenu != null && appMenu.isMenuShowing()){
+            appMenu.hideMenu();
+        }
     }
 
     public void showLoading() {
