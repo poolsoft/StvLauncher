@@ -3,8 +3,8 @@ package com.xstv.launcher.ui.widget;
 
 import android.content.Context;
 
-import com.xstv.base.BaseFragment;
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.BaseFragment;
+import com.xstv.library.base.LetvLog;
 import com.xstv.launcher.provider.db.ScreenInfo;
 
 

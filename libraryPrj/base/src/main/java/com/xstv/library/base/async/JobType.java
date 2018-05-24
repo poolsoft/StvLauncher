@@ -1,4 +1,4 @@
-package com.xstv.base.async;
+package com.xstv.library.base.async;
 
 
 public enum JobType {

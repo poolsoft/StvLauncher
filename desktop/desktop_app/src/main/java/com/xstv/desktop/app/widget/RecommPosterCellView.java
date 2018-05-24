@@ -14,7 +14,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.LetvLog;
 import com.xstv.desktop.app.R;
 import com.xstv.desktop.app.bean.PosterInfo;
 import com.xstv.desktop.app.db.ItemInfo;

@@ -1,7 +1,7 @@
 
 package com.xstv.desktop.app.util;
 
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.LetvLog;
 
 import java.security.InvalidKeyException;
 import java.security.MessageDigest;

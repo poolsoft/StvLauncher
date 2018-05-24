@@ -11,7 +11,7 @@ import android.widget.ImageView;
 
 import com.xstv.launcher.R;
 import com.xstv.launcher.ui.presenter.LauncherAdapterPresenter;
-import com.xstv.base.WeakHandler;
+import com.xstv.library.base.WeakHandler;
 
 import static android.view.View.GONE;
 

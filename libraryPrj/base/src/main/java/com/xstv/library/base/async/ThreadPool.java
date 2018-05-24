@@ -1,10 +1,10 @@
-package com.xstv.base.async;
+package com.xstv.library.base.async;
 
 
 import android.os.Process;
 
-import com.xstv.base.DesktopHelper;
-import com.xstv.base.Logger;
+import com.xstv.library.base.DesktopHelper;
+import com.xstv.library.base.Logger;
 
 import java.util.LinkedList;
 import java.util.List;

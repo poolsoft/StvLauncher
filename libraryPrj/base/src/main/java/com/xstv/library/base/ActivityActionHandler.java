@@ -1,5 +1,5 @@
 
-package com.xstv.base;
+package com.xstv.library.base;
 
 /**
  * Created by panfeng on 15-9-11. Activity向Fragment通讯接口，在Fragment中实现，处理收到的Activity请求

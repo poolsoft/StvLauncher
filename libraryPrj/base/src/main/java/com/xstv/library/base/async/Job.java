@@ -1,4 +1,4 @@
-package com.xstv.base.async;
+package com.xstv.library.base.async;
 
 /**
  * A abstract class implement from Runnable, that can be run in thread pool.

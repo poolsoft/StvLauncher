@@ -17,8 +17,8 @@ import android.view.animation.TranslateAnimation;
 import android.widget.FrameLayout;
 import android.widget.HorizontalScrollView;
 
-import com.xstv.base.BaseFragment;
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.BaseFragment;
+import com.xstv.library.base.LetvLog;
 import com.xstv.launcher.ui.activity.Launcher;
 import com.xstv.launcher.ui.presenter.LauncherAdapterPresenter;
 

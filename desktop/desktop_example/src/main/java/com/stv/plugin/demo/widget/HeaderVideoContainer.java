@@ -10,7 +10,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.stv.plugin.demo.DemoApplication;
-import com.xstv.base.Logger;
+import com.xstv.library.base.Logger;
 import com.xstv.desktop.R;
 
 

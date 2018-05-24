@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.ViewParent;
 import android.view.ViewTreeObserver;
 
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.LetvLog;
 import com.xstv.desktop.app.adapter.BaseSpaceAdapter;
 import com.xstv.desktop.app.db.ItemInfo;
 import com.xstv.desktop.app.util.LauncherState;

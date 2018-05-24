@@ -3,7 +3,7 @@ package com.xstv.launcher.provider.db;
 
 import android.text.TextUtils;
 
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.LetvLog;
 
 import java.util.ArrayList;
 import java.util.Iterator;

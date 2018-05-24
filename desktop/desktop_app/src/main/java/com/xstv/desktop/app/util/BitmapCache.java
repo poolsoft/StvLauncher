@@ -4,7 +4,7 @@ package com.xstv.desktop.app.util;
 import android.graphics.Bitmap;
 import android.util.LruCache;
 
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.LetvLog;
 import com.xstv.desktop.app.bean.AppIconBean;
 
 public class BitmapCache {

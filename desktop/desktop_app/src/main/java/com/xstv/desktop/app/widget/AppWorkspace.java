@@ -20,7 +20,6 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.xstv.base.LetvLog;
 import com.xstv.desktop.app.R;
 import com.xstv.desktop.app.adapter.AppWorkspaceAdapter;
 import com.xstv.desktop.app.adapter.BaseSpaceAdapter;
@@ -32,6 +31,8 @@ import com.xstv.desktop.app.interfaces.IAppFragment;
 import com.xstv.desktop.app.model.AppDataModel;
 import com.xstv.desktop.app.model.DataModelList;
 import com.xstv.desktop.app.util.IconFilterUtil;
+import com.xstv.library.base.BaseFragment;
+import com.xstv.library.base.LetvLog;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -57,6 +58,7 @@ public class AppWorkspace extends BaseWorkspace<List<ItemInfo>> implements AppFo
     private AppGridLayoutManager mLayoutManager;
     private AppRecyclerView mRecyclerView;
     private View mFocusedView;
+    protected BaseFragment fragment;
 
     private View mTopView;
     private TextView mTopTitleView;
@@ -294,6 +296,7 @@ public class AppWorkspace extends BaseWorkspace<List<ItemInfo>> implements AppFo
     public void setAppFragment(IAppFragment fragmentRef) {
         super.setAppFragment(fragmentRef);
         mAdapter.setAppFragment(fragmentRef);
+        fragment = (BaseFragment) fragmentRef;
     }
 
     @Override

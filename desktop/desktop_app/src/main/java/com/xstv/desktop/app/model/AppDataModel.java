@@ -21,10 +21,10 @@ import android.support.v4.util.ArrayMap;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.xstv.base.LetvLog;
-import com.xstv.base.async.Job;
-import com.xstv.base.async.JobType;
-import com.xstv.base.async.ThreadPool;
+import com.xstv.library.base.LetvLog;
+import com.xstv.library.base.async.Job;
+import com.xstv.library.base.async.JobType;
+import com.xstv.library.base.async.ThreadPool;
 import com.xstv.desktop.app.AppPluginActivator;
 import com.xstv.desktop.app.R;
 import com.xstv.desktop.app.bean.FolderInfo;

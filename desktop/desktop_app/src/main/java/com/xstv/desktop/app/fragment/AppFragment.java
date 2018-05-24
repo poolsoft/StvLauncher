@@ -1,20 +1,21 @@
 
 package com.xstv.desktop.app.fragment;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.app.FragmentActivity;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.Toast;
 
-import com.xstv.base.ActivityActionHandler;
-import com.xstv.base.BaseFragment;
-import com.xstv.base.FragmentActionHandler;
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.ActivityActionHandler;
+import com.xstv.library.base.BaseFragment;
+import com.xstv.library.base.FragmentActionHandler;
+import com.xstv.library.base.LetvLog;
 import com.xstv.desktop.app.AppPluginActivator;
 import com.xstv.desktop.app.R;
 import com.xstv.desktop.app.bean.ContentBean;

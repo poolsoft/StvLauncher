@@ -27,10 +27,10 @@ import com.xstv.launcher.ui.widget.SmartLoadingBar;
 import com.xstv.launcher.ui.widget.SwitchIndicator;
 import com.xstv.launcher.ui.widget.TabSpace;
 import com.xstv.launcher.ui.widget.ViewPagerSpace;
-import com.xstv.base.ActivityActionHandler;
-import com.xstv.base.BaseFragment;
-import com.xstv.base.FragmentActionHandler;
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.ActivityActionHandler;
+import com.xstv.library.base.BaseFragment;
+import com.xstv.library.base.FragmentActionHandler;
+import com.xstv.library.base.LetvLog;
 
 import java.util.List;
 

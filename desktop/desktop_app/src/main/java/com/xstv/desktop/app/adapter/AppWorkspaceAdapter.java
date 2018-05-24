@@ -15,7 +15,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.ViewGroup;
 
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.LetvLog;
 import com.xstv.desktop.app.bean.ContentBean;
 import com.xstv.desktop.app.bean.FolderInfo;
 import com.xstv.desktop.app.db.ItemInfo;

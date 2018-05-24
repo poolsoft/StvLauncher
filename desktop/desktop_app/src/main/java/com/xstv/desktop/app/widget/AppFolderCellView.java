@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.LetvLog;
 import com.xstv.desktop.app.R;
 import com.xstv.desktop.app.bean.FolderInfo;
 import com.xstv.desktop.app.db.ItemInfo;

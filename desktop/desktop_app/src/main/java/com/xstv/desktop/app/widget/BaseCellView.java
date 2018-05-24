@@ -7,7 +7,6 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -26,7 +25,7 @@ import android.view.ViewParent;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.LetvLog;
 import com.xstv.desktop.app.AppPluginActivator;
 import com.xstv.desktop.app.R;
 import com.xstv.desktop.app.db.ItemInfo;

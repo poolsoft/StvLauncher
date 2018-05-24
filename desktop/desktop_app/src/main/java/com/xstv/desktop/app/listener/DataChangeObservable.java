@@ -1,7 +1,7 @@
 
 package com.xstv.desktop.app.listener;
 
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.LetvLog;
 import com.xstv.desktop.app.bean.FolderInfo;
 import com.xstv.desktop.app.db.ItemInfo;
 import com.xstv.desktop.app.interfaces.DataChangeObserver;

@@ -6,7 +6,6 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.xstv.base.LetvLog;
 import com.xstv.desktop.app.bean.ContentBean;
 import com.xstv.desktop.app.db.ItemInfo;
 import com.xstv.desktop.app.interfaces.IAppFragment;

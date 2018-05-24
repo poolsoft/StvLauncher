@@ -2,7 +2,7 @@ package com.xstv.desktop.app.db;
 
 import android.database.sqlite.SQLiteDatabase;
 
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.LetvLog;
 
 /**
  * Created by zhangguanhua on 17-12-19.

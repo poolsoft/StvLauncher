@@ -15,9 +15,9 @@ import android.widget.Toast;
 import com.stv.plugin.demo.DemoApplication;
 import com.stv.plugin.demo.data.common.PosterHolder;
 import com.stv.plugin.demo.widget.adapter.ViewAdapter;
-import com.xstv.base.BaseFragment;
-import com.xstv.base.FragmentActionHandler;
-import com.xstv.base.Logger;
+import com.xstv.library.base.BaseFragment;
+import com.xstv.library.base.FragmentActionHandler;
+import com.xstv.library.base.Logger;
 import com.xstv.desktop.R;
 
 public class RootLayoutContainer extends RelativeLayout {

@@ -1,7 +1,7 @@
-package com.xstv.base.http;
+package com.xstv.library.base.http;
 
 
-import com.xstv.base.Logger;
+import com.xstv.library.base.Logger;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -26,7 +26,7 @@ import javax.net.ssl.TrustManager;
 import javax.net.ssl.TrustManagerFactory;
 import javax.net.ssl.X509TrustManager;
 
-import static com.xstv.base.http.HttpManager.SDK_HTTP_LOG_TAG;
+import static com.xstv.library.base.http.HttpManager.SDK_HTTP_LOG_TAG;
 
 class CertificateUtil {
 

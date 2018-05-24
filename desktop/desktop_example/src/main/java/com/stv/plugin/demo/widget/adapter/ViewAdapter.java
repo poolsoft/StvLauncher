@@ -14,7 +14,7 @@ import com.bumptech.glide.request.RequestOptions;
 import com.stv.plugin.demo.DemoApplication;
 import com.stv.plugin.demo.data.common.Poster;
 import com.stv.plugin.demo.widget.ItemView;
-import com.xstv.base.Logger;
+import com.xstv.library.base.Logger;
 import com.xstv.desktop.R;
 
 import java.util.ArrayList;

@@ -25,8 +25,8 @@ import com.xstv.launcher.ui.widget.TabPagerBindStrategy;
 import com.xstv.launcher.ui.widget.TabSpace;
 import com.xstv.launcher.ui.widget.TabStripImpl;
 import com.xstv.launcher.ui.widget.ViewPagerSpace;
-import com.xstv.base.BaseFragment;
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.BaseFragment;
+import com.xstv.library.base.LetvLog;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;

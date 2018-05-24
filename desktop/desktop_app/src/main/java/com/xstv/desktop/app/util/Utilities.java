@@ -19,7 +19,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.LetvLog;
 import com.xstv.desktop.app.AppPluginActivator;
 import com.xstv.desktop.app.db.ItemInfo;
 

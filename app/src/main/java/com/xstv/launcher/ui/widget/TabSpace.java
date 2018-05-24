@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import com.xstv.launcher.R;
 import com.xstv.launcher.ui.activity.Launcher;
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.LetvLog;
 
 public class TabSpace extends RelativeLayout {
     private static final String TAG = TabSpace.class.getSimpleName();

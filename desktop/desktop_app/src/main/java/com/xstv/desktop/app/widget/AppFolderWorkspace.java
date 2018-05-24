@@ -25,7 +25,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.LetvLog;
 import com.xstv.desktop.app.R;
 import com.xstv.desktop.app.adapter.AppFolderWorkspaceAdapter;
 import com.xstv.desktop.app.adapter.BaseSpaceAdapter;

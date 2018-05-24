@@ -25,9 +25,9 @@ import android.widget.LinearLayout;
 import com.xstv.launcher.R;
 import com.xstv.launcher.provider.db.ScreenInfo;
 import com.xstv.launcher.ui.activity.Launcher;
-import com.xstv.base.ActivityActionHandler;
-import com.xstv.base.BaseFragment;
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.ActivityActionHandler;
+import com.xstv.library.base.BaseFragment;
+import com.xstv.library.base.LetvLog;
 
 import java.util.ArrayList;
 

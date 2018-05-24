@@ -1,5 +1,5 @@
 
-package com.xstv.base;
+package com.xstv.library.base;
 
 import android.text.TextUtils;
 import android.util.Log;

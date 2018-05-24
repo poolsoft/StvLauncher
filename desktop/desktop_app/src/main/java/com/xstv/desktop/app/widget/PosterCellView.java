@@ -17,7 +17,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.LetvLog;
 import com.xstv.desktop.app.AppPluginActivator;
 import com.xstv.desktop.app.R;
 import com.xstv.desktop.app.bean.ParamBean;

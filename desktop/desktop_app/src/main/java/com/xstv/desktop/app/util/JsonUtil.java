@@ -5,7 +5,7 @@
 package com.xstv.desktop.app.util;
 
 import com.google.gson.Gson;
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.LetvLog;
 
 import org.json.JSONException;
 

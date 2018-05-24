@@ -21,7 +21,7 @@ import com.xstv.launcher.provider.db.ScreenInfo;
 import com.xstv.launcher.ui.LauncherApplication;
 import com.xstv.launcher.util.PreferencesUtils;
 import com.xstv.launcher.util.StringUtils;
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.LetvLog;
 
 import org.xmlpull.v1.XmlPullParser;
 

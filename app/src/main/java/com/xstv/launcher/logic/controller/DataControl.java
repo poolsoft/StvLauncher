@@ -6,7 +6,7 @@ import android.os.Looper;
 import com.xstv.launcher.logic.manager.DataModel;
 import com.xstv.launcher.provider.db.ScreenInfo;
 import com.xstv.launcher.util.DeferredHandler;
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.LetvLog;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;

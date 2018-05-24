@@ -10,8 +10,8 @@ import android.widget.TextView;
 
 import com.xstv.launcher.R;
 import com.xstv.launcher.ui.activity.Launcher;
-import com.xstv.base.LetvLog;
-import com.xstv.base.WeakHandler;
+import com.xstv.library.base.LetvLog;
+import com.xstv.library.base.WeakHandler;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;

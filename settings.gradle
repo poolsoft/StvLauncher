@@ -1,1 +1,1 @@
-include ':app', ':desktop:desktop_app', ':desktop:desktop_example', ':libraryPrj:base'
+include ':app', ':desktop:desktop_app', ':desktop:desktop_example', ':libraryPrj:base', ':desktop:desktop_leanback'

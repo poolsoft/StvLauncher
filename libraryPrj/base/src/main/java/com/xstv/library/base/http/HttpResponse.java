@@ -1,4 +1,4 @@
-package com.xstv.base.http;
+package com.xstv.library.base.http;
 
 import java.util.List;
 import java.util.Map;

@@ -11,7 +11,7 @@ import android.os.Bundle;
 import android.os.Process;
 
 import com.stv.plugin.demo.DemoApplication;
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.LetvLog;
 import com.xstv.desktop.app.AppPluginActivator;
 import com.xstv.launcher.logic.manager.DataModel;
 

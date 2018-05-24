@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.res.XmlResourceParser;
 import android.support.v4.util.ArrayMap;
 
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.LetvLog;
 import com.xstv.desktop.app.AppPluginActivator;
 import com.xstv.desktop.app.bean.FolderInfo;
 import com.xstv.desktop.app.db.ItemInfo;

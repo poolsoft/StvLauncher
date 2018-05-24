@@ -8,8 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.xstv.base.BaseFragment;
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.BaseFragment;
+import com.xstv.library.base.LetvLog;
 import com.xstv.launcher.R;
 
 public class EmptyFragment extends BaseFragment {

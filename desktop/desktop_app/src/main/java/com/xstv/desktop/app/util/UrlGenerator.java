@@ -4,7 +4,7 @@ package com.xstv.desktop.app.util;
 import android.content.Context;
 import android.text.TextUtils;
 
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.LetvLog;
 import com.xstv.desktop.app.AppPluginActivator;
 
 import java.util.regex.Matcher;

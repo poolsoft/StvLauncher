@@ -13,8 +13,8 @@ import com.stv.plugin.demo.data.common.OnDataChangedListener;
 import com.stv.plugin.demo.data.common.PosterHolder;
 import com.stv.plugin.demo.util.IdleTaskLooper;
 import com.stv.plugin.demo.widget.RootLayoutContainer;
-import com.xstv.base.BaseFragment;
-import com.xstv.base.Logger;
+import com.xstv.library.base.BaseFragment;
+import com.xstv.library.base.Logger;
 import com.xstv.desktop.R;
 
 public class DemoFragment extends BaseFragment implements OnDataChangedListener {

@@ -6,8 +6,8 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.view.ViewGroup;
 
-import com.xstv.base.BaseFragment;
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.BaseFragment;
+import com.xstv.library.base.LetvLog;
 
 import java.util.ArrayList;
 import java.util.List;

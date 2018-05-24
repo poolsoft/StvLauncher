@@ -7,7 +7,7 @@ import android.os.Message;
 import android.os.MessageQueue;
 
 import com.stv.plugin.demo.DemoApplication;
-import com.xstv.base.Logger;
+import com.xstv.library.base.Logger;
 
 import java.util.LinkedList;
 

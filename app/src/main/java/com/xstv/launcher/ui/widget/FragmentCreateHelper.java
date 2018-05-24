@@ -5,7 +5,7 @@ import android.content.Context;
 import android.support.v4.app.Fragment;
 
 import com.stv.plugin.demo.fragment.DemoFragment;
-import com.xstv.base.BaseFragment;
+import com.xstv.library.base.BaseFragment;
 import com.xstv.desktop.app.fragment.AppFragment;
 import com.xstv.launcher.provider.db.ScreenInfo;
 import com.xstv.launcher.ui.fragment.EmptyFragment;

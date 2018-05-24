@@ -1,5 +1,5 @@
 
-package com.xstv.base;
+package com.xstv.library.base;
 
 import android.app.Activity;
 import android.os.Bundle;

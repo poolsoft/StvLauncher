@@ -1,7 +1,7 @@
-package com.xstv.base.http;
+package com.xstv.library.base.http;
 
 
-import com.xstv.base.Logger;
+import com.xstv.library.base.Logger;
 
 /**
  * Retry request with ip address when failure. For example, when domain hijacking.

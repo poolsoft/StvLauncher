@@ -24,7 +24,7 @@ import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.LetvLog;
 
 /**
  * Implementation of {@link android.support.v4.view.PagerAdapter} that represents each page as a {@link Fragment} that is persistently kept in the fragment manager as long as the user can return to

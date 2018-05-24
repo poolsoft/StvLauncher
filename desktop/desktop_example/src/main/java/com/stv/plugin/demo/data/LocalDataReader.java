@@ -7,7 +7,7 @@ import android.text.TextUtils;
 import com.google.gson.Gson;
 import com.stv.plugin.demo.DemoApplication;
 import com.stv.plugin.demo.data.common.PosterHolder;
-import com.xstv.base.Logger;
+import com.xstv.library.base.Logger;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

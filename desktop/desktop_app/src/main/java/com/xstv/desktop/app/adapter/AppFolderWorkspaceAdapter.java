@@ -3,7 +3,7 @@ package com.xstv.desktop.app.adapter;
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.LetvLog;
 import com.xstv.desktop.app.db.ItemInfo;
 import com.xstv.desktop.app.holder.AppHolder;
 import com.xstv.desktop.app.widget.AppCellView;

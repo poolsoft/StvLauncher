@@ -57,7 +57,7 @@ captures/
 # Android Studio
 *.iml
 .idea
-.gradle
+#.gradle
 build/
 
 #NDK
