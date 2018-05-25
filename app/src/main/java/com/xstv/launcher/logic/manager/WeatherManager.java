@@ -5,7 +5,7 @@ import android.database.Cursor;
 import android.net.Uri;
 
 import com.xstv.base.LetvLog;
-import com.xstv.launcher.logic.model.Weather;
+import com.xstv.launcher.logic.model.WeatherInfo;
 
 public class WeatherManager {
     private static final String TAG = "WeatherManager";
@@ -13,13 +13,13 @@ public class WeatherManager {
     public static final String PACKAGE = "sina.mobile.tianqitongstv";
     public static final String URL = "content://com.sina.tianqitong.StvWeatherInfoProvider/stv_weather";
 
-    public static Weather getWeatherInfo(Context context) {
+    public static WeatherInfo getWeatherInfo(Context context) {
         LetvLog.d(TAG, " getWeatherInfo");
         return queryWeatherInfo(context, Uri.parse(URL));
     }
 
-    private static Weather queryWeatherInfo(Context context, Uri uri) {
-        Weather weather = null;
+    private static WeatherInfo queryWeatherInfo(Context context, Uri uri) {
+        WeatherInfo weather = null;
         Cursor cursor = null;
         try {
             cursor = context.getContentResolver().query(uri, null, null, null, null);
@@ -29,7 +29,7 @@ public class WeatherManager {
                 String temperature = cursor.getString(cursor.getColumnIndex("temperature")); // 温度值
                 String weatherDes = cursor.getString(cursor.getColumnIndex("weather")); // 天气描述
                 String image_icon = cursor.getString(cursor.getColumnIndex("image_icon")); // 图片对应的资源ID
-                weather = new Weather(city, temperature, weatherDes, unit, Integer.parseInt(image_icon));
+                weather = new WeatherInfo(city, temperature, weatherDes, unit, Integer.parseInt(image_icon));
             }
             LetvLog.d(TAG, " getWeatherInfo = " + weather);
         } catch (Exception e) {

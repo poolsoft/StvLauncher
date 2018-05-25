@@ -76,5 +76,6 @@ dependencies {
     //子桌面
     implementation project(':desktop:desktop_app')
     implementation project(':desktop:desktop_example')
+    //依赖的隐藏ａｐｉ，后期可以考虑优化
     compileOnly files('libs/android_provided-1.0.0.jar')
 }

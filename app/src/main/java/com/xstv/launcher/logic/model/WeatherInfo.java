@@ -1,17 +1,17 @@
 package com.xstv.launcher.logic.model;
 
-public class Weather {
+public class WeatherInfo {
     private String city; // 城市
     private String temperature; // 温度值
     private String weatherDes; // 天气描述
     private int unit; // 单位
     private int image_icon; // 图片对应的资源id
 
-    public Weather() {
+    public WeatherInfo() {
         super();
     }
 
-    public Weather(String city, String temperature, String weatherDes, int unit, int image_icon) {
+    public WeatherInfo(String city, String temperature, String weatherDes, int unit, int image_icon) {
         super();
         this.city = city;
         this.temperature = temperature;
@@ -62,6 +62,6 @@ public class Weather {
 
     @Override
     public String toString() {
-        return "Weather [city=" + city + ", temperature=" + temperature + ", weatherDes=" + weatherDes + ", unit=" + unit + ", image_icon=" + image_icon + "]";
+        return "WeatherInfo [city=" + city + ", temperature=" + temperature + ", weatherDes=" + weatherDes + ", unit=" + unit + ", image_icon=" + image_icon + "]";
     }
 }

@@ -11,24 +11,25 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.xstv.base.LetvLog;
 import com.xstv.launcher.R;
 import com.xstv.launcher.logic.manager.NetworkManager;
 import com.xstv.launcher.logic.manager.StatusReceiverManager;
 import com.xstv.launcher.logic.manager.USBManager;
 import com.xstv.launcher.logic.manager.WeatherManager;
-import com.xstv.launcher.logic.model.Weather;
+import com.xstv.launcher.logic.model.WeatherInfo;
+import com.xstv.library.base.LetvLog;
 
 public class StatusBarView extends RelativeLayout {
     private static final String TAG = "StatusBarView";
 
     private ImageView mUsbView;
+    private ImageView mUsbDividerView;
     private ImageView mNetworkView;
-    private ImageView mWeatherIcon;
-    private TextView mWeatherDegree;
+    private ImageView mWeatherIconView;
+    private TextView mWeatherDegreeView;
 
     private StatusReceiverManager mStatusReceiverManager;
-    private Weather mWeatherInfo;
+    private WeatherInfo mWeatherInfo;
 
     public StatusBarView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -39,9 +40,10 @@ public class StatusBarView extends RelativeLayout {
     private void initView(Context context) {
         inflate(context, R.layout.status_bar, this);
         mUsbView = (ImageView) findViewById(R.id.status_bar_usb);
+        mUsbDividerView = (ImageView) findViewById(R.id.status_bar_usb_divider);
         mNetworkView = (ImageView) findViewById(R.id.status_bar_network);
-        mWeatherIcon = (ImageView) findViewById(R.id.status_bar_weather_icon);
-        mWeatherDegree = (TextView) findViewById(R.id.status_bar_weather_degree);
+        mWeatherIconView = (ImageView) findViewById(R.id.status_bar_weather_icon);
+        mWeatherDegreeView = (TextView) findViewById(R.id.status_bar_weather_degree);
     }
 
     private void setViewData(Context context) {
@@ -75,8 +77,10 @@ public class StatusBarView extends RelativeLayout {
 
     private void setUsbIcon() {
         if (USBManager.getUsbStorageNum(getContext()) > 0) {
+            mUsbDividerView.setVisibility(View.VISIBLE);
             mUsbView.setVisibility(View.VISIBLE);
         } else {
+            mUsbDividerView.setVisibility(View.GONE);
             mUsbView.setVisibility(View.GONE);
         }
     }
@@ -98,20 +102,20 @@ public class StatusBarView extends RelativeLayout {
         // 天气弹出正在展示，不用更新天气信息
         mWeatherInfo = WeatherManager.getWeatherInfo(getContext());
         if (mWeatherInfo == null) {
-            mWeatherDegree.setVisibility(View.GONE);
+            mWeatherDegreeView.setVisibility(View.GONE);
             return;
         }
         try {
             if (mWeatherInfo.getUnit() == 1) {
-                mWeatherDegree.setText(mWeatherInfo.getTemperature() + getResources().getString(R.string.weather_degree_unit_f));
+                mWeatherDegreeView.setText(mWeatherInfo.getTemperature() + getResources().getString(R.string.weather_degree_unit_f));
             } else {
-                mWeatherDegree.setText(mWeatherInfo.getTemperature() + getResources().getString(R.string.weather_degree_unit_c));
+                mWeatherDegreeView.setText(mWeatherInfo.getTemperature() + getResources().getString(R.string.weather_degree_unit_c));
             }
             int id = mWeatherInfo.getImage_icon();
             Context weatherContext = WeatherManager.getWeatherContext(getContext());
             Resources weatherResources = weatherContext.getResources();
-            mWeatherIcon.setImageDrawable(weatherResources.getDrawable(id));
-            mWeatherDegree.setVisibility(View.VISIBLE);
+            mWeatherIconView.setImageDrawable(weatherResources.getDrawable(id));
+            mWeatherDegreeView.setVisibility(View.VISIBLE);
         } catch (Exception e) {
             LetvLog.d(TAG, "updateWeather e = " + e);
         }
