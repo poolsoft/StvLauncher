@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.LetvLog;
 
 public class StatusReceiverManager {
     private static final String TAG = "StatusReceiverManager";

@@ -9,8 +9,8 @@ import android.net.wifi.WifiManager;
 import android.os.SystemProperties;
 import android.widget.ImageView;
 
-import com.xstv.base.LetvLog;
 import com.xstv.launcher.R;
+import com.xstv.library.base.LetvLog;
 
 public class NetworkManager {
 

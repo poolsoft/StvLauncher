@@ -4,8 +4,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
 
-import com.xstv.base.LetvLog;
 import com.xstv.launcher.logic.model.WeatherInfo;
+import com.xstv.library.base.LetvLog;
 
 public class WeatherManager {
     private static final String TAG = "WeatherManager";

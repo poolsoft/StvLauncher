@@ -3,7 +3,7 @@ package com.xstv.launcher.util;
 import android.content.Context;
 import android.text.TextUtils;
 
-import com.xstv.base.LetvLog;
+import com.xstv.library.base.LetvLog;
 
 public class AppUtil {
     private static final String TAG = "AppUtil";
