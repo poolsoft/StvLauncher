@@ -39,7 +39,7 @@
     <declare-styleable name="GridLayout">
         <attr name="grid_column" format="integer" />
     </declare-styleable>
-    <declare-styleable name="TitleView">
+    <declare-styleable name="StatusBarView">
         <attr name="is_wp" format="boolean" />
     </declare-styleable>
     <declare-styleable name="MenuSwitcher">

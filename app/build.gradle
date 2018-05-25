@@ -71,11 +71,10 @@ dependencies {
     implementation "com.android.support:recyclerview-v7:${rootProject.ext.SUPPORT_VERSION}"
     //TODO minSDK=23,是否还需要v4？
     implementation "com.android.support:support-v4:${rootProject.ext.SUPPORT_VERSION}"
-
     //基础库
     implementation project(':libraryPrj:base')
-
     //子桌面
     implementation project(':desktop:desktop_app')
     implementation project(':desktop:desktop_example')
+    compileOnly files('libs/android_provided-1.0.0.jar')
 }

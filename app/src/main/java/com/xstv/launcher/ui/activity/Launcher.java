@@ -153,7 +153,7 @@ public class Launcher extends FragmentActivity implements FragmentActionHandler,
         mRootView = (ViewGroup) findViewById(R.id.activity_root);
         mTabSpace = (TabSpace) findViewById(R.id.tabspace);
         mViewPagerSpace = (ViewPagerSpace) findViewById(R.id.metro_space);
-        mTitleView = (View) findViewById(R.id.title_view);
+        mTitleView = (View) findViewById(R.id.status_bar);
         mDebugDisplayMemTv = (TextView) findViewById(R.id.mem_stats_display);
         mDebugDisplayPluginTv = (TextView) findViewById(R.id.plugin_info_display);
         mSwitchIndicator = new SwitchIndicator(mRootView, mViewPagerSpace);

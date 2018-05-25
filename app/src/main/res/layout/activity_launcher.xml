@@ -6,12 +6,23 @@
     android:layout_height="match_parent"
     android:background="@drawable/ic_launcher_bg"
     android:clipChildren="false"
+    android:layout_marginTop="24dp"
     android:descendantFocusability="afterDescendants">
+    <!-- todo: root marginTop is temp -->
+
+    <com.xstv.launcher.ui.widget.StatusBarView
+        android:id="@+id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:drawingCacheQuality="auto"
+        android:persistentDrawingCache="all" />
 
     <com.xstv.launcher.ui.widget.ViewPagerSpace
         android:id="@+id/metro_space"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/tabspace_layout_margin_top"
         android:clipChildren="false"
         android:drawingCacheQuality="auto"
         android:persistentDrawingCache="all" />
@@ -61,15 +72,6 @@
             tab:pstsTabHeight="@dimen/activity_launcher_tab_strip_height"
             tab:pstsTabPaddingLeftRight="@dimen/activity_launcher_tab_strip_padding_left" />
     </com.xstv.launcher.ui.widget.TabSpace>
-
-    <View
-        android:id="@+id/title_view"
-        android:layout_width="match_parent"
-        android:layout_height="50dip"
-        android:background="#ffff55"
-        android:focusable="false"
-        android:focusableInTouchMode="false"
-        android:visibility="visible" />
 
     <TextView
         android:id="@+id/mem_stats_display"
