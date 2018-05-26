@@ -16,8 +16,11 @@ import com.stv.plugin.demo.widget.RootLayoutContainer;
 import com.xstv.library.base.BaseFragment;
 import com.xstv.library.base.Logger;
 import com.xstv.desktop.R;
+import com.xstv.library.base.presenter.IContract;
 
-public class DemoFragment extends BaseFragment implements OnDataChangedListener {
+import java.util.Collection;
+
+public class DemoFragment extends BaseFragment implements OnDataChangedListener,IContract.IView{
 
     private Logger mLogger = Logger.getLogger(DemoApplication.PLUGINTAG, "DemoFragment");
     private RootLayoutContainer mLayoutContainer;
@@ -193,5 +196,20 @@ public class DemoFragment extends BaseFragment implements OnDataChangedListener 
         if (isActive() && hasShown) {
             //mLayoutContainer.updateRefreshTimeLess(mDataManager.getRefreshThreshold(), time);
         }
+    }
+
+    @Override
+    public void init() {
+
+    }
+
+    @Override
+    public void showError(String error) {
+
+    }
+
+    @Override
+    public void showData(String pID, Collection collection) {
+
     }
 }
