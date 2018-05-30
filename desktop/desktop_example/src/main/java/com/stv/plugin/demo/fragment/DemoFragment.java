@@ -11,16 +11,19 @@ import com.stv.plugin.demo.DemoApplication;
 import com.stv.plugin.demo.data.DataManager;
 import com.stv.plugin.demo.data.common.OnDataChangedListener;
 import com.stv.plugin.demo.data.common.PosterHolder;
+import com.stv.plugin.demo.presenter.ExamplePresenter;
 import com.stv.plugin.demo.util.IdleTaskLooper;
 import com.stv.plugin.demo.widget.RootLayoutContainer;
+import com.xstv.desktop.R;
 import com.xstv.library.base.BaseFragment;
 import com.xstv.library.base.Logger;
-import com.xstv.desktop.R;
-import com.xstv.library.base.presenter.IContract;
+import com.xstv.library.base.model.ModelID;
+import com.xstv.library.base.presenter.DataType;
+import com.xstv.library.base.presenter.IView;
 
 import java.util.Collection;
 
-public class DemoFragment extends BaseFragment implements OnDataChangedListener,IContract.IView{
+public class DemoFragment extends BaseFragment implements OnDataChangedListener,IView {
 
     private Logger mLogger = Logger.getLogger(DemoApplication.PLUGINTAG, "DemoFragment");
     private RootLayoutContainer mLayoutContainer;
@@ -28,10 +31,12 @@ public class DemoFragment extends BaseFragment implements OnDataChangedListener,
     private boolean hasShown;
     private DataManager mDataManager;
     private IdleTaskLooper mIdleTaskLooper;
+    ExamplePresenter examplePresenter ;
 
     public DemoFragment() {
         mLogger.d("create fragment instance");
         mDataManager = DataManager.getInstance();
+        examplePresenter = new ExamplePresenter(this, "com.stv.plugin.demo", ModelID.EXAMPLE_MODEL_ID);
     }
 
     @Override
@@ -73,6 +78,8 @@ public class DemoFragment extends BaseFragment implements OnDataChangedListener,
         mLogger.d(">>> onStart <<<");
         mDataManager.setOnDataChangedListener(this);
         mDataManager.startTimer2RefreshData();
+        examplePresenter.initData(new DataType());
+        examplePresenter.fetchData(null);
     }
 
     /**
@@ -86,6 +93,7 @@ public class DemoFragment extends BaseFragment implements OnDataChangedListener,
         mDataManager.setOnDataChangedListener(null);
         mDataManager.stopTimer2RefreshData();
         mIdleTaskLooper.cancelAll();
+        examplePresenter.recycle();
     }
 
     /**
@@ -199,17 +207,62 @@ public class DemoFragment extends BaseFragment implements OnDataChangedListener,
     }
 
     @Override
-    public void init() {
-
-    }
-
-    @Override
     public void showError(String error) {
 
     }
 
     @Override
-    public void showData(String pID, Collection collection) {
+    public void startAppAnim() {
+
+    }
+
+    @Override
+    public void backToTab() {
+
+    }
+
+    @Override
+    public void checkHandDetectEnter() {
+
+    }
+
+    @Override
+    public void showStatusbar() {
+
+    }
+
+    @Override
+    public void hideStatusBar() {
+
+    }
+
+    @Override
+    public void showTabView() {
+
+    }
+
+    @Override
+    public void hideTabView() {
+
+    }
+
+    @Override
+    public void setKeyDragOut(boolean is) {
+
+    }
+
+    @Override
+    public void setTouchDragOut(boolean is) {
+
+    }
+
+    @Override
+    public void onDataInitialize(Collection collection) {
+
+    }
+
+    @Override
+    public void onDataChange(Collection collection) {
 
     }
 }

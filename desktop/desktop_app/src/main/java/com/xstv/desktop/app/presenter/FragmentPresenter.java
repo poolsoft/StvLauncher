@@ -131,12 +131,12 @@ public class FragmentPresenter extends BasePresenter<OnDataChangeListener> imple
 
     public void updateData() {
         if (!isNotifyUI || isFetchedDataAfter16 || (isNotifyUI && !isServerDataLoaded)) {
-            LetvLog.i(TAG, "updateData no need update Data");
+            LetvLog.i(TAG, "fetchData no need update Data");
             return;
         }
 
         if (isCurrentTimeAfter16()) {
-            LetvLog.i(TAG, "updateData start update Data.");
+            LetvLog.i(TAG, "fetchData start update Data.");
             PosterDataModel.getInstance().fetchPosterData(true);
         }
     }
