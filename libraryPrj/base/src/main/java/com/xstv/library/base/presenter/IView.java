@@ -1,7 +1,5 @@
 package com.xstv.library.base.presenter;
 
-import java.util.Collection;
-
 /**
  * @author wuh
  * @date 18-5-28 下午4:11
@@ -14,36 +12,71 @@ import java.util.Collection;
  * <p>
  * 注意：回调IView的方法线程都是在UI主线程，不需要UI再进行线程切换，所以从UI发起数据请求到回调可能延时的情况，比如从网络获取数据。
  */
-public interface IView<T> {
+public interface IView<Result> {
 
     /**
-     * 显示页面错误信息
+     * 如果你想从model获取数据, 那么就实现这个接口.
      *
-     * @param error
+     * @param <Result> 返回的数据类型.
      */
-    void showError(String error);
+    interface DataCallback<Result> {
+        /**
+         * model获取到数据后回调方法,运行在UI线程.
+         *
+         * @param result
+         */
+        void onDataBack(Result result);
 
-    void startAppAnim();
+        /**
+         * 数据更新回调方法,运行在UI线程.
+         *
+         * @param result
+         */
+        void onDataChange(Result result);
+    }
 
-    void backToTab();
+    /**
+     * 与Fragment交互相关的回调接口
+     */
+    interface FragmentCallback {
+        /**
+         * 显示页面错误信息
+         *
+         * @param error
+         */
+        void showError(String error);
 
-    void checkHandDetectEnter();
+        void startAppAnim();
 
-    void showStatusbar();
+        void backToTab();
 
-    void hideStatusBar();
+        void checkHandDetectEnter();
 
-    void showTabView();
+        void showStatusbar();
 
-    void hideTabView();
+        void hideStatusBar();
 
-    void setKeyDragOut(boolean is);
+        void showTabView();
 
-    void setTouchDragOut(boolean is);
+        void hideTabView();
 
-    void onDataInitialize(Collection<? extends T> collection);
+        void setKeyDragOut(boolean is);
 
-    void onDataChange(Collection<? extends T> collection);
+        void setTouchDragOut(boolean is);
 
-    void onRefreshTimeLess(int time);
+    }
+
+    /**
+     * 如果有获取数据功能,则创建一个实现了{@link DataCallback}接口的实例,并返回.实例会绑定到Presenter中.
+     *
+     * @return
+     */
+    DataCallback<Result> bindDataCallback();
+
+    /**
+     * 如果有Fragment交互功能,则创建一个实现{@link FragmentCallback}接口的实例,并返回,实例会绑定到Presenter中.
+     *
+     * @return
+     */
+    FragmentCallback bindFragmentCallback();
 }

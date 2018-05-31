@@ -17,13 +17,11 @@ import com.stv.plugin.demo.widget.RootLayoutContainer;
 import com.xstv.desktop.R;
 import com.xstv.library.base.BaseFragment;
 import com.xstv.library.base.Logger;
+import com.xstv.library.base.bean.DataBean;
 import com.xstv.library.base.model.ModelID;
-import com.xstv.library.base.presenter.DataType;
 import com.xstv.library.base.presenter.IView;
 
-import java.util.Collection;
-
-public class DemoFragment extends BaseFragment implements OnDataChangedListener,IView {
+public class DemoFragment extends BaseFragment implements OnDataChangedListener, IView {
 
     private Logger mLogger = Logger.getLogger(DemoApplication.PLUGINTAG, "DemoFragment");
     private RootLayoutContainer mLayoutContainer;
@@ -31,18 +29,25 @@ public class DemoFragment extends BaseFragment implements OnDataChangedListener,
     private boolean hasShown;
     private DataManager mDataManager;
     private IdleTaskLooper mIdleTaskLooper;
-    ExamplePresenter examplePresenter ;
+    ExamplePresenter examplePresenter;
+    LeanbackPresenter leanbackPresenter;
 
     public DemoFragment() {
         mLogger.d("create fragment instance");
         mDataManager = DataManager.getInstance();
-        examplePresenter = new ExamplePresenter(this, "com.stv.plugin.demo", ModelID.EXAMPLE_MODEL_ID);
+        examplePresenter = new ExamplePresenter(this, "com.stv.plugin.demo.fragment", ModelID.EXAMPLE_MODEL_ID);
+        examplePresenter.bind();
+
+        leanbackPresenter = new LeanbackPresenter(this,"",ModelID.LEANBACK_MODEL_ID);
+        leanbackPresenter.bind();
     }
 
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         mIdleTaskLooper = new IdleTaskLooper();
+        examplePresenter.initData();
+        leanbackPresenter.initData();
     }
 
     @Override
@@ -52,6 +57,8 @@ public class DemoFragment extends BaseFragment implements OnDataChangedListener,
         mIdleTaskLooper.cancelAll();
         mIdleTaskLooper = null;
         mLayoutContainer = null;
+        examplePresenter.unBind();
+        leanbackPresenter.unBind();
     }
 
     /**
@@ -78,8 +85,8 @@ public class DemoFragment extends BaseFragment implements OnDataChangedListener,
         mLogger.d(">>> onStart <<<");
         mDataManager.setOnDataChangedListener(this);
         mDataManager.startTimer2RefreshData();
-        examplePresenter.initData(new DataType());
-        examplePresenter.fetchData(null);
+        examplePresenter.getData(null);
+        leanbackPresenter.getData(null);
     }
 
     /**
@@ -93,7 +100,8 @@ public class DemoFragment extends BaseFragment implements OnDataChangedListener,
         mDataManager.setOnDataChangedListener(null);
         mDataManager.stopTimer2RefreshData();
         mIdleTaskLooper.cancelAll();
-        examplePresenter.recycle();
+        examplePresenter.stopWork();
+        leanbackPresenter.stopWork();
     }
 
     /**
@@ -107,6 +115,8 @@ public class DemoFragment extends BaseFragment implements OnDataChangedListener,
         mLogger.d(">>> onCrush <<<");
         mDataManager.destroy();
         mDataManager = null;
+        examplePresenter.unBind();
+        leanbackPresenter.unBind();
     }
 
     /**
@@ -129,6 +139,13 @@ public class DemoFragment extends BaseFragment implements OnDataChangedListener,
         hasShown = gainShow;
         if (mLayoutContainer != null) {
             mLayoutContainer.onLayoutShowChanged(gainShow);
+        }
+        if (gainShow) {
+            examplePresenter.getData(null);
+            leanbackPresenter.getData(null);
+        } else {
+            examplePresenter.stopWork();
+            leanbackPresenter.stopWork();
         }
     }
 
@@ -206,63 +223,47 @@ public class DemoFragment extends BaseFragment implements OnDataChangedListener,
         }
     }
 
+    /**
+     * 如果有获取数据功能,则创建一个实现了{@link DataCallback}接口的实例,并返回.实例会绑定到Presenter中.
+     *
+     * @return
+     */
     @Override
-    public void showError(String error) {
-
+    public DataCallback bindDataCallback() {
+        return new MyDataCallback();
     }
 
+    /**
+     * 如果有Fragment交互功能,则创建一个实现{@link FragmentCallback}接口的实例,并返回,实例会绑定到Presenter中.
+     *
+     * @return
+     */
     @Override
-    public void startAppAnim() {
-
+    public FragmentCallback bindFragmentCallback() {
+        return null;
     }
 
-    @Override
-    public void backToTab() {
+    class MyDataCallback implements IView.DataCallback<DataBean> {
+        private Logger logger = Logger.getLogger("BaseFrame", "MyDataCallback");
 
-    }
+        /**
+         * model获取到数据后回调方法
+         *
+         * @param dataBean
+         */
+        @Override
+        public void onDataBack(DataBean dataBean) {
+            logger.d(" onDataBack" + dataBean);
+        }
 
-    @Override
-    public void checkHandDetectEnter() {
-
-    }
-
-    @Override
-    public void showStatusbar() {
-
-    }
-
-    @Override
-    public void hideStatusBar() {
-
-    }
-
-    @Override
-    public void showTabView() {
-
-    }
-
-    @Override
-    public void hideTabView() {
-
-    }
-
-    @Override
-    public void setKeyDragOut(boolean is) {
-
-    }
-
-    @Override
-    public void setTouchDragOut(boolean is) {
-
-    }
-
-    @Override
-    public void onDataInitialize(Collection collection) {
-
-    }
-
-    @Override
-    public void onDataChange(Collection collection) {
-
+        /**
+         * 数据更新回调方法
+         *
+         * @param dataBean
+         */
+        @Override
+        public void onDataChange(DataBean dataBean) {
+            logger.d(" onDataChange" + dataBean);
+        }
     }
 }

@@ -7,4 +7,5 @@ package com.xstv.library.base.model;
  */
 public class ModelID {
     public static final String EXAMPLE_MODEL_ID = "ExampleDataModel";
+    public static final String LEANBACK_MODEL_ID = "LeanbackDataModel";
 }

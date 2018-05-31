@@ -13,9 +13,9 @@ import java.util.Map;
  * @author wuh
  * @date 18-5-28 下午4:07
  * @describe BaseDataModel
- * 每一个桌面都有一个数据管理类Model，用来请求网络数据，缓存管理，数据库存储。
+ * 每一个桌面都有一个数据管理类Model,用来请求网络数据,缓存管理,数据库存储.
  * <p>
- * 每一个DataModel都注册到DataManager中，统一由DataManager来管理。
+ * 每一个DataModel都注册到DataManager中,统一由DataManager来管理.
  */
 public abstract class BaseDataModel {
 
@@ -27,9 +27,9 @@ public abstract class BaseDataModel {
     public DataModelManager mDataModelManager;
 
     /**
-     * 在创建Presenter的时候会调用。
+     * 在创建Presenter的时候会调用.
      *
-     * @param id 一个Model的唯一标示，通常是包名+类名。
+     * @param id 一个Model的唯一标示,通常是包名+类名.
      */
     public BaseDataModel(@NonNull final String id) {
         ID = id;
@@ -37,12 +37,13 @@ public abstract class BaseDataModel {
         if (mDataModelManager == null) {
             mDataModelManager = DataModelManager.getInstance();
         }
+        mDataModelManager.addModel(id, this);
     }
 
     /**
-     * 添加一个Presenter到Model.如果之前添加过同样ID的Presenter则会替换掉之前的。
+     * 添加一个Presenter到Model.如果之前添加过同样ID的Presenter则会替换掉之前的.
      *
-     * @param pId           Presenter ID,Presenter的包名+类名。
+     * @param pId           Presenter ID,Presenter的包名+类名.
      * @param basePresenter
      */
     public void addPresenter(@NonNull final String pId, @NonNull BasePresenter basePresenter) {
@@ -51,6 +52,23 @@ public abstract class BaseDataModel {
             return;
         }
         mPresenterMap.put(pId, basePresenter);
+    }
+
+    /**
+     * 从Model中移除Presenter.移除的时候会调用{@link #recyclePresenter(String)}回收Presenter对应在DataModel的资源.
+     *
+     * @param pId Presenter ID,Presenter的包名+类名.
+     */
+    public void removePresenter(@NonNull final String pId) {
+        logger.d("removePresenter pID = " + pId);
+        if (pId == null) {
+            return;
+        }
+        BasePresenter presenter = mPresenterMap.remove(pId);
+        if (null != presenter) {
+            logger.d("can unBind Presenter pID = " + pId);
+            recyclePresenter(pId);
+        }
     }
 
     /**
@@ -67,30 +85,15 @@ public abstract class BaseDataModel {
     }
 
     /**
-     * 从Model中移除Presenter。移除的时候会调用{@code recyclePresenter}回收Presenter对应在DataModel的资源。
-     *
-     * @param pId Presenter ID,Presenter的包名+类名。
-     */
-    public void removePresenter(@NonNull final String pId) {
-        logger.d("removePresenter pID = " + pId);
-        if (pId == null) {
-            return;
-        }
-        BasePresenter presenter = mPresenterMap.remove(pId);
-        if (null != presenter) {
-            logger.d("can recycle Presenter pID = " + pId);
-            recyclePresenter(pId);
-        }
-    }
-
-    /**
      * 回收Presenter对应在DataModel的资源
      *
      * @param pId
      */
     public abstract void recyclePresenter(@NonNull final String pId);
 
+    public abstract void stopWork(@NonNull final String pId);
+
     public abstract void fetchData(DataType type);
 
-    public abstract void initData(DataType type);
+    public abstract void initData();
 }
