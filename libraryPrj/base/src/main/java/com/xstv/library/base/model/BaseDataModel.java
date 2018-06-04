@@ -19,6 +19,9 @@ import java.util.Map;
  */
 public abstract class BaseDataModel {
 
+    public static final String EXAMPLE_MODEL_ID = "ExampleDataModel";
+    public static final String LEANBACK_MODEL_ID = "LeanbackDataModel";
+
     private String TAG = "BaseDataModel";
     @NonNull
     public final String ID;

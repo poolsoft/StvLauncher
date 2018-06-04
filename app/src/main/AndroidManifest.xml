@@ -20,7 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Leanback">
 
-        <activity android:name=".ui.activity.Launcher">
+        <activity
+            android:screenOrientation="landscape"
+            android:name=".ui.activity.Launcher">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

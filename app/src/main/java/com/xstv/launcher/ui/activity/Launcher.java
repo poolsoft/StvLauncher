@@ -288,11 +288,11 @@ public class Launcher extends FragmentActivity implements FragmentActionHandler,
         boolean handled = super.dispatchKeyEvent(event);
 
         /** handle after all view */
-        if (!handled) {
+        /*if (!handled) {
             if (event.getAction() == KeyEvent.ACTION_DOWN && event.getKeyCode() == KeyEvent.KEYCODE_DPAD_UP) {
                 handled = true;
             }
-        }
+        }*/
         return handled;
     }
 

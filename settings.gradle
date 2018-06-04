@@ -1,1 +1,6 @@
-include ':app', ':desktop:desktop_app', ':desktop:desktop_example', ':libraryPrj:base', ':desktop:desktop_leanback'
+include ':app',
+        ':libraryPrj:base',
+        ':libraryPrj:widget',
+        ':desktop:desktop_app',
+        ':desktop:desktop_example',
+        ':desktop:desktop_emodule'

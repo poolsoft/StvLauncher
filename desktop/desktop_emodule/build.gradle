@@ -1,0 +1,29 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.COMPILE_SDK_VERSION
+    buildToolsVersion rootProject.ext.BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.MIN_SDK_VERSION
+        targetSdkVersion rootProject.ext.TARGET_SDK_VERSION
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    compileOnly "com.google.code.gson:gson:${rootProject.ext.GSON_VERSION}"
+    compileOnly "com.squareup.okhttp3:okhttp:${rootProject.ext.OKHTTP_VERSION}"
+    compileOnly "com.github.bumptech.glide:glide:${rootProject.ext.GLIDE_VERSION}"
+    implementation "com.android.support:leanback-v17:${rootProject.ext.SUPPORT_VERSION}"
+    //引用基础库
+    compileOnly project(':libraryPrj:base')
+    compileOnly project(':libraryPrj:widget')
+}

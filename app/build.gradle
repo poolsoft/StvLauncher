@@ -67,15 +67,19 @@ dependencies {
     implementation "com.squareup.okhttp3:okhttp:${rootProject.ext.OKHTTP_VERSION}"
     implementation "org.greenrobot:greendao:${rootProject.ext.GREEDDAO_VERSION}"
     implementation "com.github.bumptech.glide:glide:${rootProject.ext.GLIDE_VERSION}"
-    implementation "com.android.support:leanback-v17:${rootProject.ext.SUPPORT_VERSION}"
+    compileOnly "com.android.support:leanback-v17:${rootProject.ext.SUPPORT_VERSION}"
     implementation "com.android.support:recyclerview-v7:${rootProject.ext.SUPPORT_VERSION}"
     //TODO minSDK=23,是否还需要v4？
     implementation "com.android.support:support-v4:${rootProject.ext.SUPPORT_VERSION}"
+
     //基础库
     implementation project(':libraryPrj:base')
+    implementation project(':libraryPrj:widget')
+
     //子桌面
     implementation project(':desktop:desktop_app')
-    implementation project(':desktop:desktop_example')
+    implementation project(':desktop:desktop_emodule')
+
     //依赖的隐藏ａｐｉ，后期可以考虑优化
     compileOnly files('libs/android_provided-1.0.0.jar')
 }

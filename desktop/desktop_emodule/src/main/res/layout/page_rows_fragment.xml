@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v17.leanback.widget.BrowseFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scale_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="80dip">
+
+    <android.support.v17.leanback.widget.VerticalGridView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/container_list"
+        style="?attr/rowsVerticalGridStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false" />
+
+    <TextView
+        android:id="@+id/loading_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateTint="@android:color/white"
+        android:text="loading"
+        android:visibility="gone" />
+
+</android.support.v17.leanback.widget.BrowseFrameLayout>

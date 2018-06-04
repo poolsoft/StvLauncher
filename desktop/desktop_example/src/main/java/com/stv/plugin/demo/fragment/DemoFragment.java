@@ -35,10 +35,10 @@ public class DemoFragment extends BaseFragment implements OnDataChangedListener,
     public DemoFragment() {
         mLogger.d("create fragment instance");
         mDataManager = DataManager.getInstance();
-        examplePresenter = new ExamplePresenter(this, "com.stv.plugin.demo.fragment", ModelID.EXAMPLE_MODEL_ID);
+        examplePresenter = new ExamplePresenter(this, ModelID.EXAMPLE_MODEL_ID);
         examplePresenter.bind();
 
-        leanbackPresenter = new LeanbackPresenter(this,"",ModelID.LEANBACK_MODEL_ID);
+        leanbackPresenter = new LeanbackPresenter(this, ModelID.LEANBACK_MODEL_ID);
         leanbackPresenter.bind();
     }
 

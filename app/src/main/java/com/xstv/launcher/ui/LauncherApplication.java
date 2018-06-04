@@ -10,16 +10,15 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.Process;
 
-import com.stv.plugin.demo.DemoApplication;
-import com.xstv.library.base.LetvLog;
 import com.xstv.desktop.app.AppPluginActivator;
+import com.xstv.desktop.app.widget.AppWorkspace;
 import com.xstv.launcher.logic.manager.DataModel;
+import com.xstv.library.base.LetvLog;
 
 import java.lang.Thread.UncaughtExceptionHandler;
 import java.util.ArrayList;
 import java.util.List;
 
-//import com.stv.launcher.logic.manager.LePluginShell;
 
 
 public class LauncherApplication extends Application implements Application.ActivityLifecycleCallbacks {
@@ -62,7 +61,6 @@ public class LauncherApplication extends Application implements Application.Acti
 
 
             AppPluginActivator.initContext(this);
-            DemoApplication.sWidgetApplicationContext = this;
         }
     }
 

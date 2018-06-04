@@ -15,13 +15,17 @@ import com.xstv.library.base.model.ModelID;
  * @describe BasePresenter
  * 功能：
  * 1.负责从model层获取数据,然后调用view显示数据.
- * 2.一个Presenter对应一个IView,可以有多个Presenter,每个Presenter都注册到DataModel中.
- * 3.编写具体的业务逻辑和数据请求.
+ * 2.编写具体的业务逻辑和数据请求.
+ * <p>
+ * 注意:一个Presenter对应一个IView,可以有多个Presenter,每个Presenter都注册到DataModel中.
  */
 public abstract class BasePresenter implements IPresenter {
     private Logger logger = Logger.getLogger("BaseFrame", "BasePresenter");
     @NonNull
     public IView mView;
+    /**
+     * Presenter的ID,不能为NULL,或者空字符串,最好是Presenter的包名+类名.
+     */
     @NonNull
     public final String mPresenterID;
     protected BaseDataModel mDataModel;
@@ -30,10 +34,9 @@ public abstract class BasePresenter implements IPresenter {
 
     /**
      * @param view    实现了IView的对象
-     * @param pid     Presenter的ID,不能为NULL,或者空字符串,最好是Presenter的包名+类名.
      * @param modelID 需要关联的Model模块ID.
      */
-    public BasePresenter(@NonNull IView view, @NonNull final String pid, @NonNull final String modelID) {
+    public BasePresenter(@NonNull IView view, @NonNull final String modelID) {
         mPresenterID = this.getClass().getName();
         logger.d(mPresenterID + " is init.");
         mView = view;

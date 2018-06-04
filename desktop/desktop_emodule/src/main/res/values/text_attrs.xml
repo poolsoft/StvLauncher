@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <declare-styleable name="ImageViewRoundRect">
+        <attr name="radius" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="TextViewQuick">
+        <attr name="android:text" />
+        <!-- Text color. -->
+        <attr name="android:textColor" />
+        <!-- Size of the text. Recommended dimension type for text is "sp" for scaled-pixels (example: 15sp). -->
+        <attr name="android:textSize" />
+        <!-- Style (bold, italic, bolditalic) for the text. -->
+        <attr name="android:textStyle" />
+        <!-- Typeface (normal, sans, serif, monospace) for the text. -->
+        <attr name="android:typeface" />
+        <!-- Font family (named by string) for the text. -->
+        <attr name="android:fontFamily" />
+    </declare-styleable>
+</resources>

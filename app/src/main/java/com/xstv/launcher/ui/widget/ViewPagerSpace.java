@@ -2,6 +2,7 @@
 package com.xstv.launcher.ui.widget;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.v4.view.ViewPager;
@@ -15,12 +16,11 @@ import android.view.animation.Animation;
 import android.view.animation.Interpolator;
 import android.view.animation.TranslateAnimation;
 import android.widget.FrameLayout;
-import android.widget.HorizontalScrollView;
 
-import com.xstv.library.base.BaseFragment;
-import com.xstv.library.base.LetvLog;
 import com.xstv.launcher.ui.activity.Launcher;
 import com.xstv.launcher.ui.presenter.LauncherAdapterPresenter;
+import com.xstv.library.base.BaseFragment;
+import com.xstv.library.base.LetvLog;
 
 import java.lang.reflect.Field;
 
@@ -36,6 +36,7 @@ public class ViewPagerSpace extends ViewPager implements LauncherAdapterPresente
 
     private FragmentPagerScroller mScroller;
     private static final boolean sFindFocusBeforeTrunPage = false;
+    private static final boolean sCanExecuteKeyEvent = false;
 
     public ViewPagerSpace(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -55,6 +56,7 @@ public class ViewPagerSpace extends ViewPager implements LauncherAdapterPresente
         }
     }
 
+/*
     @Override
     protected boolean canScroll(View v, boolean arg1, int arg2, int arg3, int arg4) {
         if (v instanceof HorizontalScrollView) {
@@ -62,9 +64,14 @@ public class ViewPagerSpace extends ViewPager implements LauncherAdapterPresente
         }
         return super.canScroll(v, arg1, arg2, arg3, arg4);
     }
+*/
 
     @Override
     public boolean executeKeyEvent(KeyEvent event) {
+        //禁止viewpager内部自动切页
+        if (!sCanExecuteKeyEvent) {
+            return false;
+        }
         if (sFindFocusBeforeTrunPage) {
             return super.executeKeyEvent(event);
         }
@@ -129,10 +136,10 @@ public class ViewPagerSpace extends ViewPager implements LauncherAdapterPresente
 
     @Override
     public boolean arrowScroll(int direction) {
-        if (!currentCanDragOut()) {
+        /*if (!currentCanDragOut()) {
             LetvLog.d("FragmentViewPager", "can not dragout, ignore arrowScroll");
             return true;
-        }
+        }*/
         return super.arrowScroll(direction);
     }
 
@@ -190,7 +197,7 @@ public class ViewPagerSpace extends ViewPager implements LauncherAdapterPresente
     @Override
     public boolean dispatchKeyEvent(KeyEvent event) {
         boolean handled = super.dispatchKeyEvent(event);
-        if (!handled) {
+        if (!handled && sCanExecuteKeyEvent) {
             if (event.getAction() == KeyEvent.ACTION_DOWN) {
                 int keyCode = event.getKeyCode();
                 if (keyCode == KeyEvent.KEYCODE_DPAD_UP) {
@@ -229,7 +236,7 @@ public class ViewPagerSpace extends ViewPager implements LauncherAdapterPresente
         target.startAnimation(ani);
     }
 
-    @Override
+/*    @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
         if (!currentCanTouchDragOut()) {
             // current screen disable switch
@@ -256,7 +263,7 @@ public class ViewPagerSpace extends ViewPager implements LauncherAdapterPresente
             ex.printStackTrace();
         }
         return false;
-    }
+    }*/
 
     public boolean currentCanTouchDragOut() {
         if (getAdapter() != null) {
@@ -292,10 +299,6 @@ public class ViewPagerSpace extends ViewPager implements LauncherAdapterPresente
 
     @Override
     public void onScreenScrolling(int state) {
-
-    }
-
-    public void checkNeedEmptyBackground() {
 
     }
 }

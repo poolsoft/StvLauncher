@@ -3,7 +3,7 @@
 
     <!-- TabSpace -->
     <dimen name="tabspace_layout_height">70dip</dimen>
-    <dimen name="tabspace_layout_margin_top">52dip</dimen>
+    <dimen name="tabspace_layout_margin_top">22dip</dimen>
     <dimen name="tabspace_layout_padding_horizontal_leftedge">80dip</dimen>
     <dimen name="tabspace_layout_padding_horizontal_rightedge">80dip</dimen>
     <dimen name="tabspace_items_margin">52dip</dimen>

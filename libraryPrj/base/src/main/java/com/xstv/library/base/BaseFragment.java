@@ -402,12 +402,12 @@ public abstract class BaseFragment extends Fragment implements ActivityActionHan
      *                     {@link ViewGroup#FOCUS_BLOCK_DESCENDANTS}.
      */
     public void setContentDescendantFocusability(int focusability) {
-        if (mContainer != null && mContainer instanceof ViewGroup) {
+        /*if (mContainer != null && mContainer instanceof ViewGroup) {
             ((ViewGroup) mContainer).setDescendantFocusability(focusability);
             if (mContainerCanGetFocus) {
                 mContainer.setFocusable(focusability != ViewGroup.FOCUS_BLOCK_DESCENDANTS);
             }
-        }
+        }*/
     }
 
     @Override

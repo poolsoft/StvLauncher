@@ -44,6 +44,11 @@ public final class Logger {
 
     }
 
+    private Logger(String tag) {
+        mModuleTAG = "[" + tag + "]:";
+    }
+
+
     private Logger(String module, String tag) {
         mModuleTAG = "[" + module + "][" + tag + "]:";
     }
@@ -61,6 +66,13 @@ public final class Logger {
             throw new IllegalArgumentException();
         }
         return new Logger(module, tag);
+    }
+
+    public static Logger getLogger(String tag) {
+        if (TextUtils.isEmpty(tag)) {
+            throw new IllegalArgumentException();
+        }
+        return new Logger(tag);
     }
 
     /**

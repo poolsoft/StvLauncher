@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="view_item" type="id"/>
+    <item name="view_hold" type="id"/>
+
+    <item name="di_data_observable" type="id"/>
+    <item name="di_view_visibility" type="id"/>
+    <item name="di_data_calculator" type="id"/>
+    <item name="di_image_scale_type" type="id"/>
+    <item name="di_ui_type_id" type="id"/>
+    <item name="di_use_item_ui_type" type="id"/>
+
+    <item name="package_name" type="id"/>
+    <item name="class_name" type="id"/>
+    <item name="icon_url" type="id"/>
+
+    <item name="view_image_url" type="id"/>
+    <item name="focus_rect" type="id"/>
+    <item name="focus_res" type="id"/>
+    <item name="focus_scale" type="id"/>
+    <item name="break_img_align" type="id"/>
+    <item name="detail_inner_player" type="id"/>
+    <item name="text_view_title" type="id"/>
+</resources>

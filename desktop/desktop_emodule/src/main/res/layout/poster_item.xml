@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xstv.desktop.emodule.view.DiBaseView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:descendantFocusability="blocksDescendants"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+
+    <com.xstv.desktop.emodule.view.ImageViewQuick
+        android:id="@+id/di_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="@drawable/ic_launcher"
+        android:scaleType="fitXY" />
+
+
+    <com.xstv.desktop.emodule.view.FocusEffectView
+        android:id="@+id/di_focus_effect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/di_img"
+        android:layout_alignLeft="@id/di_img"
+        android:layout_alignRight="@id/di_img"
+        android:layout_alignTop="@id/di_img"
+        android:visibility="invisible" />
+
+    <com.xstv.desktop.emodule.view.BreakImageView
+        android:id="@+id/di_break_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/di_img"
+        android:layout_gravity="bottom|center_horizontal"
+        android:scaleType="fitEnd"
+        android:visibility="invisible" />
+
+    <com.xstv.desktop.emodule.view.HintTextView
+        android:id="@+id/di_hint"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hint_height"
+        android:layout_alignBottom="@id/di_img"
+        android:layout_gravity="bottom"
+        android:padding="@dimen/item_hint_padding" />
+
+    <TextView
+        android:id="@+id/di_free_hint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <com.xstv.desktop.emodule.view.ItemTextView
+        android:id="@+id/di_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/di_img"
+        android:layout_marginTop="6dp"
+        android:duplicateParentState="true"
+        android:gravity="center"
+        android:textColor="#889900"
+        android:textSize="@dimen/item_title_text_size" />
+
+    <TextView
+        android:id="@+id/di_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:shadowColor="#00000000"
+        android:singleLine="true"
+        android:visibility="gone" />
+</com.xstv.desktop.emodule.view.DiBaseView>

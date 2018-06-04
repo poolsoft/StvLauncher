@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageButton;
@@ -14,6 +15,8 @@ import android.widget.TextView;
 import com.xstv.launcher.R;
 import com.xstv.launcher.ui.activity.Launcher;
 import com.xstv.library.base.LetvLog;
+
+import java.util.ArrayList;
 
 public class TabSpace extends RelativeLayout {
     private static final String TAG = TabSpace.class.getSimpleName();
@@ -66,14 +69,13 @@ public class TabSpace extends RelativeLayout {
 
         mDrawLinePaint.setColor(Color.parseColor("#33ffffff"));
         mDrawLinePaint.setStrokeWidth(1);
-
     }
 
-    @Override
+/*    @Override
     protected boolean onRequestFocusInDescendants(int direction, Rect previouslyFocusedRect) {
         // 禁止ViewGrounp在子view中寻找焦点
         return true;
-    }
+    }*/
 
     public void layout() {
         String[] unfocus = new String[0];

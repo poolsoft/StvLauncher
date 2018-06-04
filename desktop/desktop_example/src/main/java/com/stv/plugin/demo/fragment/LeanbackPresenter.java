@@ -10,11 +10,10 @@ import com.xstv.library.base.presenter.IView;
 public class LeanbackPresenter extends BasePresenter {
     /**
      * @param view    实现了IView的对象
-     * @param pid     Presenter的ID,不能为NULL,或者空字符串,最好是Presenter的包名+类名.
      * @param modelID 需要关联的Model模块ID.
      */
-    public LeanbackPresenter(@NonNull IView view, @NonNull String pid, @NonNull String modelID) {
-        super(view, pid, modelID);
+    public LeanbackPresenter(@NonNull IView view, @NonNull String modelID) {
+        super(view, modelID);
     }
 
     /**

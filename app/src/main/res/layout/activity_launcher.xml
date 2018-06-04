@@ -15,6 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clipChildren="false"
+        android:layout_marginTop="10dip"
         android:drawingCacheQuality="auto"
         android:persistentDrawingCache="all" />
 

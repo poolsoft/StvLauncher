@@ -14,8 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:layout_marginLeft="35dip"
-        android:layout_marginRight="35dip"
+        android:layout_marginLeft="25dip"
+        android:layout_marginRight="25dip"
         android:duplicateParentState="true"
         android:enabled="true"
         android:gravity="center" />

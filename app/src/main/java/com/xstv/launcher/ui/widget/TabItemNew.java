@@ -3,13 +3,18 @@ package com.xstv.launcher.ui.widget;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.xstv.launcher.R;
+import com.xstv.library.base.LetvLog;
 
 /**
  * Item to be shown on {@link TabStripImpl}
@@ -105,5 +110,19 @@ public class TabItemNew extends FrameLayout {
 
     public void setTextColor(ColorStateList textColor) {
         this.textColor = textColor;
+    }
+
+    @Override
+    public boolean requestFocus(int direction, Rect previouslyFocusedRect) {
+        try {
+            TabSpace tabSpace = (TabSpace) getParent().getParent().getParent();
+            if (tabSpace != null && tabSpace.getFocusedChild() == null && direction == View.FOCUS_UP) {
+                tabSpace.setCurrentTab(tabSpace.getCurrentTab());
+                return true;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return super.requestFocus(direction, previouslyFocusedRect);
     }
 }
